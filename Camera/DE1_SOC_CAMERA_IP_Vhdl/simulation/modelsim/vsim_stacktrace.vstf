@@ -1,0 +1,40 @@
+# Current time Sat May 16 14:57:43 2015
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fdf430: '<unknown (@0xf7fdf430)>'
+# 1    0xf7e39d6d: 'abort + 0x17d' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 2    0xf7e2fb53: '_assert_fail + 0xf3' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 3    0x083c553e: '<unknown (@0x83c553e)>'
+# 4    0x083c7ea0: '<unknown (@0x83c7ea0)>'
+# 5    0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+
+# Current time Sat May 16 14:57:43 2015
+# ModelSim Stack Trace
+# Program = vsim
+# Id = "10.1d"
+# Version = "2012.11"
+# Date = "Nov  2 2012"
+# Platform = linuxpe
+# 0    0xf7fdf430: '<unknown (@0xf7fdf430)>'
+# 1    0xf7e39d6d: 'abort + 0x17d' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 2    0xf7e2fb53: '_assert_fail + 0xf3' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 3    0x083c5631: '<unknown (@0x83c5631)>'
+# 4    0xf7e3b50a: '_secure_getenv + 0x11a' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 5    0xf7e3b57a: 'exit + 0x2a' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 6    0x083c5a32: '<unknown (@0x83c5a32)>'
+# 7    0x083c8858: '<unknown (@0x83c8858)>'
+# 8    0xf7fdf40b: '<unknown (@0xf7fdf40b)>'
+# 9    0xf7e39d6d: 'abort + 0x17d' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 10   0xf7e2fb53: '_assert_fail + 0xf3' in '/lib/i386-linux-gnu/i686/cmov/libc.so.6'
+# 11   0x083c553e: '<unknown (@0x83c553e)>'
+# 12   0x083c7ea0: '<unknown (@0x83c7ea0)>'
+# 13   0x08061dc6: '<unknown (@0x8061dc6)>'
+# End of Stack Trace
+
+

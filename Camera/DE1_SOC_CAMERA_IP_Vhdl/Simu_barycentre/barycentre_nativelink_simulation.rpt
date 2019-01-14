@@ -1,0 +1,22 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneivgx
+Quartus root          :  /softslin/altera14_0/quartus/linux64/
+Quartus sim root      :  /softslin/altera14_0/quartus/eda/sim_lib
+Simulation Tool       :  modelsim
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  barycentre_6_1200mv_85c_slow.vho
+Sim SDF File       :  barycentre_6_1200mv_85c_vhd_slow.sdo
+Sim dir               :  simulation/modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim software
+Sourced NativeLink script /softslin/altera14_0/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File barycentre_run_msim_gate_vhdl.do already exists - backing up current file as barycentre_run_msim_gate_vhdl.do.bak5
+Info: Spawning ModelSim Simulation software 

@@ -1,0 +1,22 @@
+
+State Machine - |TOP_D5M_IP|PWM_cycle:b2v_inst10|etat
+Name etat.new_t1 etat.new_t0 etat.pwm_low_s etat.pwm_high_s etat.pwm_init_high_s 
+etat.pwm_init_high_s 0 0 0 0 0 
+etat.pwm_high_s 0 0 0 1 1 
+etat.pwm_low_s 0 0 1 0 1 
+etat.new_t0 0 1 0 0 1 
+etat.new_t1 1 0 0 0 1 
+
+State Machine - |TOP_D5M_IP|barycentre:b2v_inst4|state
+Name state.calcul_barycentre state.ligne state.colonne state.new_img state.init 
+state.init 0 0 0 0 0 
+state.new_img 0 0 0 1 1 
+state.colonne 0 0 1 0 1 
+state.ligne 0 1 0 0 1 
+state.calcul_barycentre 1 0 0 0 1 
+
+State Machine - |TOP_D5M_IP|D5M_IP:b2v_inst|I2C_CCD_Config:u8|mSetup_ST
+Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
+mSetup_ST.0000 0 0 0 
+mSetup_ST.0001 1 0 1 
+mSetup_ST.0010 1 1 0 

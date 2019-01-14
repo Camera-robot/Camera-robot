@@ -1,0 +1,283 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/tp/xph3app/xph3app602/Camera_robot/Camera/Bench
+Ebarycentre
+Z1 w1545304128
+Z2 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z3 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z4 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z8 8../VHD/barycentre.vhd
+Z9 F../VHD/barycentre.vhd
+l0
+L11
+VflW3@lY@W6c<<N^8ZY5DC0
+!s100 ;@M<:MZ4]>8`GIK1jC98;1
+Z10 OL;C;10.5c;63
+31
+Z11 !s110 1547402760
+!i10b 1
+Z12 !s108 1547402760.000000
+Z13 !s90 -93|-work|Lib|../VHD/barycentre.vhd|
+Z14 !s107 ../VHD/barycentre.vhd|
+!i113 0
+Z15 o-93 -work Lib
+Z16 tExplicit 1 CvgOpt 0
+Aarch_barycentre
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 barycentre 0 22 flW3@lY@W6c<<N^8ZY5DC0
+l60
+L32
+VGm[fSE>:GC4mD8Nime;6@1
+!s100 LEGo:Vzb;SdzPPok3IOc83
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Ebench_barycentre
+Z17 w1547311589
+R2
+R3
+R6
+R7
+R0
+Z18 8../Bench/tb_barycentre.vhd
+Z19 F../Bench/tb_barycentre.vhd
+l0
+L9
+V04]M^@i^<]8X3h[?N0d]i1
+!s100 J[D>[TZbShAPGhNne?C6N2
+R10
+31
+R11
+!i10b 1
+R12
+Z20 !s90 -93|-work|../Lib|../Bench/tb_barycentre.vhd|
+Z21 !s107 ../Bench/tb_barycentre.vhd|
+!i113 0
+Z22 o-93 -work ../Lib
+R16
+Atest_position
+R2
+R3
+R6
+R7
+DEx4 work 16 bench_barycentre 0 22 04]M^@i^<]8X3h[?N0d]i1
+l44
+L12
+ViE2bCKU_7`E_57hn`jmll1
+!s100 L0S`a?HVP=VO=`;HVRE<i2
+R10
+31
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 0
+R22
+R16
+Egensync
+Z23 w1542784950
+R5
+R4
+R6
+R7
+R0
+Z24 8../VHD/gensync.vhd
+Z25 F../VHD/gensync.vhd
+l0
+L6
+VX7m=M8dJR3IYI4@EA<PzI3
+!s100 ?g2`^GLg^:AUjN`NZRMX22
+R10
+31
+R11
+!i10b 1
+Z26 !s108 1547402759.000000
+Z27 !s90 -93|-work|Lib|../VHD/gensync.vhd|
+Z28 !s107 ../VHD/gensync.vhd|
+!i113 0
+R15
+R16
+Abehavioral
+R5
+R4
+R6
+R7
+DEx4 work 7 gensync 0 22 X7m=M8dJR3IYI4@EA<PzI3
+l28
+L20
+VbHoVU]T7MiiDZa5KhIZaA0
+!s100 g_F<VXHTj`;046Q<QU1K:2
+R10
+31
+R11
+!i10b 1
+R26
+R27
+R28
+!i113 0
+R15
+R16
+Eimage_process
+Z29 w1547302366
+R2
+R4
+R5
+R3
+R6
+R7
+R0
+Z30 8../VHD/image_process.vhd
+Z31 F../VHD/image_process.vhd
+l0
+L13
+VdBG3PzoBf6J?oYPHNbjDQ3
+!s100 <1^>6EX81636`zPk]24Qj3
+R10
+31
+R11
+!i10b 1
+R12
+Z32 !s90 -93|-work|Lib|../VHD/image_process.vhd|
+Z33 !s107 ../VHD/image_process.vhd|
+!i113 0
+R15
+R16
+Artl
+R2
+R4
+R5
+R3
+R6
+R7
+DEx4 work 13 image_process 0 22 dBG3PzoBf6J?oYPHNbjDQ3
+l45
+L37
+V1HN?<83ECL4^>U>IIFz:[0
+!s100 UKm:Nkz6eQmmWUTQO]]lU2
+R10
+31
+R11
+!i10b 1
+R12
+R32
+R33
+!i113 0
+R15
+R16
+vtbench
+Z34 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+DXx4 work 18 tbench_top_sv_unit 0 22 =UBah5G]bJhX3X98607X<2
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 C:jUVQQjGgUMoijBm`>hG2
+I5>a<Pz7JRHn?44^7JiCZ70
+!s105 tbench_top_sv_unit
+S1
+R0
+Z35 w1545303645
+Z36 8../Bench/tbench_top.sv
+Z37 F../Bench/tbench_top.sv
+L0 5
+Z38 OL;L;10.5c;63
+R12
+Z39 !s107 img_utils.svh|../Bench/tbench_top.sv|
+Z40 !s90 -sv|-work|../Lib|../Bench/tbench_top.sv|
+!i113 0
+Z41 o-sv -work ../Lib
+Z42 tCvgOpt 0
+Xtbench_top_sv_unit
+R34
+V=UBah5G]bJhX3X98607X<2
+r1
+!s85 0
+31
+!i10b 1
+!s100 _5:RA8imdYHAHR[3GO^A02
+I=UBah5G]bJhX3X98607X<2
+!i103 1
+S1
+R0
+R35
+R36
+R37
+Fimg_utils.svh
+L0 22
+R38
+R12
+R39
+R40
+!i113 0
+R41
+R42
+Etop_bar
+Z43 w1545304305
+R3
+R5
+R4
+R6
+R7
+R0
+Z44 8../VHD/Top_camera.vhd
+Z45 F../VHD/Top_camera.vhd
+l0
+L11
+VhDBHPKjg_NTn`fUPiPoa52
+!s100 @DEUQnfclec;DJ=M^ZOC]1
+R10
+31
+R11
+!i10b 1
+R12
+Z46 !s90 -93|-work|Lib|../VHD/Top_camera.vhd|
+Z47 !s107 ../VHD/Top_camera.vhd|
+!i113 0
+R15
+R16
+Abar
+R3
+R5
+R4
+R6
+R7
+DEx4 work 7 top_bar 0 22 hDBHPKjg_NTn`fUPiPoa52
+l97
+L38
+V4F?ngVW`FNLeVMaFP10OS3
+!s100 LK[1cgT6O<?:z?5X`G[mm3
+R10
+31
+R11
+!i10b 1
+R12
+R46
+R47
+!i113 0
+R15
+R16

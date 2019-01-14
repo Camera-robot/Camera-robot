@@ -1,0 +1,17 @@
+
+State Machine - |top_72_to_serial|UART_TX:U3|r_SM_Main
+Name r_SM_Main.s_Cleanup r_SM_Main.s_TX_Stop_Bit r_SM_Main.s_TX_Data_Bits r_SM_Main.s_TX_Start_Bit r_SM_Main.s_Idle 
+r_SM_Main.s_Idle 0 0 0 0 0 
+r_SM_Main.s_TX_Start_Bit 0 0 0 1 1 
+r_SM_Main.s_TX_Data_Bits 0 0 1 0 1 
+r_SM_Main.s_TX_Stop_Bit 0 1 0 0 1 
+r_SM_Main.s_Cleanup 1 0 0 0 1 
+
+State Machine - |top_72_to_serial|coor_to_trame:U1|curr_state
+Name curr_state.S5 curr_state.S4 curr_state.S3 curr_state.S2 curr_state.S1 curr_state.S0 
+curr_state.S0 0 0 0 0 0 0 
+curr_state.S1 0 0 0 0 1 1 
+curr_state.S2 0 0 0 1 0 1 
+curr_state.S3 0 0 1 0 0 1 
+curr_state.S4 0 1 0 0 0 1 
+curr_state.S5 1 0 0 0 0 1 

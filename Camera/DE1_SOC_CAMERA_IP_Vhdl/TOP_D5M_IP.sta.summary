@@ -1,0 +1,245 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'CK_50MHz'
+Slack : 8.824
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 10.010
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'CCD_PIXCLK'
+Slack : 34.423
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CK_50MHz'
+Slack : -2.637
+TNS   : -5.267
+
+Type  : Slow 1100mV 85C Model Hold 'CCD_PIXCLK'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'CCD_PIXCLK'
+Slack : 11.440
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'CK_50MHz'
+Slack : 13.809
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 15.099
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.643
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'CK_50MHz'
+Slack : 1.595
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'CCD_PIXCLK'
+Slack : 5.229
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CK_50MHz'
+Slack : 8.851
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.174
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : 18.894
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CK_50MHz'
+Slack : 8.948
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 10.290
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CCD_PIXCLK'
+Slack : 34.500
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CK_50MHz'
+Slack : -2.583
+TNS   : -5.163
+
+Type  : Slow 1100mV 0C Model Hold 'CCD_PIXCLK'
+Slack : 0.240
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'CCD_PIXCLK'
+Slack : 12.046
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'CK_50MHz'
+Slack : 13.881
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 15.226
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.616
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'CK_50MHz'
+Slack : 1.681
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'CCD_PIXCLK'
+Slack : 4.772
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CK_50MHz'
+Slack : 8.802
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 15.171
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : 18.859
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CK_50MHz'
+Slack : 9.019
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 12.626
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CCD_PIXCLK'
+Slack : 36.068
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CK_50MHz'
+Slack : -1.377
+TNS   : -2.744
+
+Type  : Fast 1100mV 85C Model Hold 'CCD_PIXCLK'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'CCD_PIXCLK'
+Slack : 14.598
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'CK_50MHz'
+Slack : 15.845
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 16.020
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'CK_50MHz'
+Slack : 0.869
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'CCD_PIXCLK'
+Slack : 3.030
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CK_50MHz'
+Slack : 8.762
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.908
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : 18.788
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CK_50MHz'
+Slack : 9.015
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 13.093
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CCD_PIXCLK'
+Slack : 36.531
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CK_50MHz'
+Slack : -1.350
+TNS   : -2.694
+
+Type  : Fast 1100mV 0C Model Hold 'CCD_PIXCLK'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'CCD_PIXCLK'
+Slack : 15.014
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 16.104
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'CK_50MHz'
+Slack : 16.217
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.258
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'CK_50MHz'
+Slack : 0.834
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'CCD_PIXCLK'
+Slack : 2.832
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CK_50MHz'
+Slack : 8.756
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.938
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CCD_PIXCLK'
+Slack : 18.780
+TNS   : 0.000
+
+------------------------------------------------------------

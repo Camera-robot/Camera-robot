@@ -1,0 +1,439 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/simulation/modelsim
+Ealtpll0
+Z1 w1454925238
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/altpll0.vhd
+Z5 F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/altpll0.vhd
+l0
+L42
+VHH_[m7Hn>g>W=VV34[Jz@3
+!s100 QH?3AOT:Z58_>QfN@h8l22
+Z6 OV;C;10.3c;59
+31
+Z7 !s110 1490264965
+!i10b 1
+Z8 !s108 1490264965.345287
+Z9 !s90 -reportprogress|300|-93|-work|work|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/altpll0.vhd|
+Z10 !s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/altpll0.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1
+Asyn
+R2
+R3
+DEx4 work 7 altpll0 0 22 HH_[m7Hn>g>W=VV34[Jz@3
+l128
+L52
+V@3;jKk;G220h[m;G2dGU61
+!s100 9GX=DFleUdH]X@S6a0SL_1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+valtpll0_altpll
+!s110 1490264960
+!i10b 1
+!s100 l>n0EBZGTZ3?52:5L=EnL2
+Im8n7KFidAW>?RD1^N^dZ;1
+Z13 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1454925830
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/db/altpll0_altpll.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/db/altpll0_altpll.v
+L0 30
+Z14 OV;L;10.3c;59
+r1
+!s85 0
+31
+!s108 1490264960.071175
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/db/altpll0_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/db|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/db/altpll0_altpll.v|
+!i113 1
+Z15 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/db
+vCCD_Capture
+Z16 !s110 1490264959
+!i10b 1
+!s100 ;mNhP1FIRfd:?OKE;<zc_1
+ILGNHo=_YdPDfk36=W8UPM2
+R13
+R0
+Z17 w1454925210
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/CCD_Capture.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/CCD_Capture.v
+Z18 L0 43
+R14
+r1
+!s85 0
+31
+!s108 1490264959.676674
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/CCD_Capture.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/CCD_Capture.v|
+!i113 1
+R15
+Z19 !s92 -vlog01compat -work work +incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V
+n@c@c@d_@capture
+vD5M_IP
+Z20 !s110 1490264957
+!i10b 1
+!s100 2Zg01h<zo]0F?4P@FmOnH0
+I4Xn=d9gNYSlj=IHYck>e>1
+R13
+R0
+R17
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/D5M_IP.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/D5M_IP.v
+R18
+R14
+r1
+!s85 0
+31
+!s108 1490264956.793518
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/D5M_IP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/D5M_IP.v|
+!i113 1
+R15
+R19
+n@d5@m_@i@p
+Edpram_512x512
+Z21 w1454925209
+R2
+R3
+R0
+Z22 8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/dpram_512x512.vhd
+Z23 F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/dpram_512x512.vhd
+l0
+L42
+Vd9LR_:[jE>`1RLF92Qd2o0
+!s100 gbV00oHfC[m:eT4@3A^Cm0
+R6
+31
+R7
+!i10b 1
+Z24 !s108 1490264965.735392
+Z25 !s90 -reportprogress|300|-93|-work|work|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/dpram_512x512.vhd|
+Z26 !s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/dpram_512x512.vhd|
+!i113 1
+R11
+R12
+Asyn
+R2
+R3
+DEx4 work 13 dpram_512x512 0 22 d9LR_:[jE>`1RLF92Qd2o0
+l94
+L56
+Vj9I2]lz_L=@;l;UL>Q^1V0
+!s100 ]1G4i3Bo2nn06X09N4k5]0
+R6
+31
+R7
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Egensync
+Z27 w1454939176
+Z28 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z29 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+R2
+R3
+R0
+Z30 8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/gensync.vhd
+Z31 F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/gensync.vhd
+l0
+L6
+VkSM2^5@Wo:MzkMgGnAPZh1
+!s100 JnK5i1Ye`d3M^H581C;<F0
+R6
+31
+R7
+!i10b 1
+Z32 !s108 1490264964.928906
+Z33 !s90 -reportprogress|300|-93|-work|work|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/gensync.vhd|
+Z34 !s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/gensync.vhd|
+!i113 1
+R11
+R12
+Abehavioral
+R28
+R29
+R2
+R3
+DEx4 work 7 gensync 0 22 kSM2^5@Wo:MzkMgGnAPZh1
+l28
+L20
+V^GPO[n6mRO5T@Bh83m5jO3
+!s100 TbOCV?NCEncbP`XaTk<=I3
+R6
+31
+R7
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12
+vI2C_CCD_Config
+R16
+!i10b 1
+!s100 2M9^Z5i3;hIGYUWgRe48N3
+I?`DDA1^7V>za]FjPogFjX0
+R13
+R0
+R21
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_CCD_Config.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_CCD_Config.v
+R18
+R14
+r1
+!s85 0
+31
+!s108 1490264959.266731
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_CCD_Config.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_CCD_Config.v|
+!i113 1
+R15
+R19
+n@i2@c_@c@c@d_@config
+vI2C_Controller
+Z35 !s110 1490264958
+!i10b 1
+!s100 Vk6b<<61gFNO2?SEPHclX1
+I7_?=;1mh^1h<@k34Z]AXP2
+R13
+R0
+R21
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_Controller.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_Controller.v
+L0 42
+R14
+r1
+!s85 0
+31
+!s108 1490264958.846051
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_Controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/I2C_Controller.v|
+!i113 1
+R15
+R19
+n@i2@c_@controller
+Eimage_process
+Z36 w1454938008
+Z37 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R28
+R29
+R2
+R3
+R0
+Z38 8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/image_process.vhd
+Z39 F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/image_process.vhd
+l0
+L11
+VbN3D@GY8ReSL=3UUF:iJJ0
+!s100 KM_R5B0J9in30abLYjL_j3
+R6
+31
+Z40 !s110 1490264966
+!i10b 1
+Z41 !s108 1490264966.144563
+Z42 !s90 -reportprogress|300|-93|-work|work|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/image_process.vhd|
+Z43 !s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/image_process.vhd|
+!i113 1
+R11
+R12
+Artl
+R37
+R28
+R29
+R2
+R3
+DEx4 work 13 image_process 0 22 bN3D@GY8ReSL=3UUF:iJJ0
+l40
+L33
+V_170W7a4]TRQ]QYEkN38O3
+!s100 5fJUNd3>>HPYTI<k0H^BE3
+R6
+31
+R40
+!i10b 1
+R41
+R42
+R43
+!i113 1
+R11
+R12
+vLine_Buffer
+R35
+!i10b 1
+!s100 3_gnFFWNJMfQKi_?`kma11
+I:AWOhGB@D`hNcU:cPjj8j3
+R13
+R0
+R17
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Line_Buffer.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Line_Buffer.v
+L0 39
+R14
+r1
+!s85 0
+31
+!s108 1490264958.354319
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Line_Buffer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Line_Buffer.v|
+!i113 1
+R15
+R19
+n@line_@buffer
+Epwm_cycle
+Z44 w1459497737
+R28
+R29
+R37
+R2
+R3
+R0
+Z45 8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/pwm_cycle.vhd
+Z46 F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/pwm_cycle.vhd
+l0
+L10
+Vz_nA?`hYzGc_1>n[J7ZSU3
+!s100 ;<2^@fK;hBSh[Q@MFm4OL2
+R6
+31
+R40
+!i10b 1
+Z47 !s108 1490264966.582333
+Z48 !s90 -reportprogress|300|-93|-work|work|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/pwm_cycle.vhd|
+Z49 !s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/pwm_cycle.vhd|
+!i113 1
+R11
+R12
+Artl_accum
+R28
+R29
+R37
+R2
+R3
+DEx4 work 9 pwm_cycle 0 22 z_nA?`hYzGc_1>n[J7ZSU3
+l48
+L27
+VGXV3adS=IY40Ba`oMT8Db1
+!s100 jj=k;1oC;iHhVK[AXEo671
+R6
+31
+R40
+!i10b 1
+R47
+R48
+R49
+!i113 1
+R11
+R12
+vRAW2RGB
+R35
+!i10b 1
+!s100 Qef?DOZViZ=9jTfin>fJm0
+IDaZD=lY;3OIOG>[h^_LlV3
+R13
+R0
+R21
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/RAW2RGB.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/RAW2RGB.v
+R18
+R14
+r1
+!s85 0
+31
+!s108 1490264957.934950
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/RAW2RGB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/RAW2RGB.v|
+!i113 1
+R15
+R19
+n@r@a@w2@r@g@b
+vReset_Delay
+R20
+!i10b 1
+!s100 fnNJO=aXMYj^K7]:[jz=@2
+IaU9cZDHoA8KiPdOg6NmR62
+R13
+R0
+R17
+8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Reset_Delay.v
+F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Reset_Delay.v
+R18
+R14
+r1
+!s85 0
+31
+!s108 1490264957.569540
+!s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Reset_Delay.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/V/Reset_Delay.v|
+!i113 1
+R15
+R19
+n@reset_@delay
+Etop_d5m_ip
+Z50 w1490172583
+R29
+R28
+R2
+R3
+R0
+Z51 8/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/TOP_D5M_IP.vhd
+Z52 F/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/TOP_D5M_IP.vhd
+l0
+L26
+VX5F_;VjPhDTfI1`G0=LGZ1
+!s100 Dj8]GX@:d5aCQe:]RjC:@1
+R6
+31
+Z53 !s110 1490264964
+!i10b 1
+Z54 !s108 1490264964.395669
+Z55 !s90 -reportprogress|300|-93|-work|work|/tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/TOP_D5M_IP.vhd|
+Z56 !s107 /tp-fmr/rollandl-fmr/altera/projet_rr/Projet_Camera_CMOS/DE1-SOC_CAMERA_IP_Q14/CAMERA_IP_512x512/TOP_D5M_IP.vhd|
+!i113 1
+R11
+R12
+Abdf_type
+R29
+R28
+R2
+R3
+DEx4 work 10 top_d5m_ip 0 22 X5F_;VjPhDTfI1`G0=LGZ1
+l288
+L59
+VNgD7U3hj50nAmHGlR4i790
+!s100 `M7E1Y8XU2if6O83c?bR30
+R6
+31
+R53
+!i10b 1
+R54
+R55
+R56
+!i113 1
+R11
+R12

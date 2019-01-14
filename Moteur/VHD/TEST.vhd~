@@ -1,0 +1,64 @@
+
+
+	
+	signal s_out, s_out_regi, s_out_rego			:	STD_LOGIC_VECTOR(71 downto 0);
+
+
+
+
+
+
+
+
+
+
+
+machine : process(curr_state, s_x, s_x_regi, s_x_rego, s_h, s_h_regi, s_h_rego, s_mode, s_mode_regi, s_mode_rego, s_oh, s_oh_regi, s_oh_rego, s_id, s_id_regi, s_id_rego1, s_id_rego2, s_mvt, s_mvt_regi, s_mvt_rego, s_twi, s_twi_regi, s_twi_rego1, s_twi_rego2, s_len, s_len_regi, s_len_rego, s_ins, s_ins_regi, s_ins_rego, s_adr, s_adr_regi, s_adr_rego, s_sum, s_sum_regi, s_sum_rego, s_out)
+begin
+
+	case curr_state is
+
+	when S0 =>
+
+		trametop <= (others => '0');
+		s_out_regi <= (others => '0');
+		s_out_rego <= (others => '0');
+
+
+
+	when S1 =>
+		trametop <= s_out_rego;
+		s_out_regi <= s_out_rego;
+		s_out_rego <= s_out_regi;
+
+--		s_out <= s_out_save;
+
+
+
+
+	when S2 =>
+		trametop <= s_out_rego;
+		s_out_regi <= s_out_rego;
+		s_out_rego <= s_out_regi;
+
+--		s_h <= s_h_reg;
+
+	when S3 =>
+		trametop <= s_out_rego;
+		s_out_regi <= s_out_rego;
+		s_out_rego <= s_out_regi;
+
+
+	when S4 =>
+
+		s_sum_rego <= s_sum;
+
+		trametop <= s_out;
+		s_out_regi <= s_out_rego;
+		s_out_rego <= s_out_regi;
+
+	end case;
+
+end process;
+
+end T;

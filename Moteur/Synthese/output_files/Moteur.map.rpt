@@ -1,0 +1,565 @@
+Analysis & Synthesis report for Moteur
+Mon Jan 14 12:28:00 2019
+Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |top_72_to_serial|UART_TX:U3|r_SM_Main
+  9. State Machine - |top_72_to_serial|coor_to_trame:U1|curr_state
+ 10. User-Specified and Inferred Latches
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for Top-level Entity: |top_72_to_serial
+ 16. Parameter Settings for User Entity Instance: UART_TX:U3
+ 17. Port Connectivity Checks: "decode_servo:U2"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Jan 14 12:28:00 2019       ;
+; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
+; Revision Name                   ; Moteur                                      ;
+; Top-level Entity Name           ; top_72_to_serial                            ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 105                                         ;
+; Total pins                      ; 16                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; top_72_to_serial   ; Moteur             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone IV GX      ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization                                                    ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; ../VHD/UART_TX.vhd               ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/UART_TX.vhd          ;         ;
+; ../VHD/trame_assembler.vhd       ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/trame_assembler.vhd  ;         ;
+; ../VHD/top_72_to_serial.vhd      ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/top_72_to_serial.vhd ;         ;
+; ../VHD/mode_switch.vhd           ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/mode_switch.vhd      ;         ;
+; ../VHD/instruction.vhd           ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/instruction.vhd      ;         ;
+; ../VHD/identifier.vhd            ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/identifier.vhd       ;         ;
+; ../VHD/decode_servo.vhd          ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/decode_servo.vhd     ;         ;
+; ../VHD/coor_to_trame.vhd         ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/coor_to_trame.vhd    ;         ;
+; ../VHD/checksum.vhd              ; yes             ; User VHDL File  ; /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/checksum.vhd         ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 76        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 110       ;
+;     -- 7 input functions                    ; 4         ;
+;     -- 6 input functions                    ; 33        ;
+;     -- 5 input functions                    ; 11        ;
+;     -- 4 input functions                    ; 22        ;
+;     -- <=3 input functions                  ; 40        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 105       ;
+;                                             ;           ;
+; I/O pins                                    ; 16        ;
+; Total DSP Blocks                            ; 0         ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 105       ;
+; Total fan-out                               ; 795       ;
+; Average fan-out                             ; 3.22      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                               ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+; |top_72_to_serial          ; 110 (4)           ; 105 (0)      ; 0                 ; 0          ; 16   ; 0            ; |top_72_to_serial                                 ; work         ;
+;    |UART_TX:U3|            ; 31 (31)           ; 30 (30)      ; 0                 ; 0          ; 0    ; 0            ; |top_72_to_serial|UART_TX:U3                      ; work         ;
+;    |coor_to_trame:U1|      ; 36 (24)           ; 60 (60)      ; 0                 ; 0          ; 0    ; 0            ; |top_72_to_serial|coor_to_trame:U1                ; work         ;
+;       |checksum:CS|        ; 10 (10)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |top_72_to_serial|coor_to_trame:U1|checksum:CS    ; work         ;
+;       |mode_switch:MS|     ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |top_72_to_serial|coor_to_trame:U1|mode_switch:MS ; work         ;
+;    |decode_servo:U2|       ; 39 (39)           ; 15 (15)      ; 0                 ; 0          ; 0    ; 0            ; |top_72_to_serial|decode_servo:U2                 ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+---------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_72_to_serial|UART_TX:U3|r_SM_Main                                                                                            ;
++--------------------------+---------------------+-------------------------+--------------------------+--------------------------+------------------+
+; Name                     ; r_SM_Main.s_Cleanup ; r_SM_Main.s_TX_Stop_Bit ; r_SM_Main.s_TX_Data_Bits ; r_SM_Main.s_TX_Start_Bit ; r_SM_Main.s_Idle ;
++--------------------------+---------------------+-------------------------+--------------------------+--------------------------+------------------+
+; r_SM_Main.s_Idle         ; 0                   ; 0                       ; 0                        ; 0                        ; 0                ;
+; r_SM_Main.s_TX_Start_Bit ; 0                   ; 0                       ; 0                        ; 1                        ; 1                ;
+; r_SM_Main.s_TX_Data_Bits ; 0                   ; 0                       ; 1                        ; 0                        ; 1                ;
+; r_SM_Main.s_TX_Stop_Bit  ; 0                   ; 1                       ; 0                        ; 0                        ; 1                ;
+; r_SM_Main.s_Cleanup      ; 1                   ; 0                       ; 0                        ; 0                        ; 1                ;
++--------------------------+---------------------+-------------------------+--------------------------+--------------------------+------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------+
+; State Machine - |top_72_to_serial|coor_to_trame:U1|curr_state                                                 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name          ; curr_state.S5 ; curr_state.S4 ; curr_state.S3 ; curr_state.S2 ; curr_state.S1 ; curr_state.S0 ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; curr_state.S0 ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; curr_state.S1 ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; curr_state.S2 ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; curr_state.S3 ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; curr_state.S4 ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; curr_state.S5 ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                       ;
++----------------------------------------------------+-----------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal         ; Free of Timing Hazards ;
++----------------------------------------------------+-----------------------------+------------------------+
+; coor_to_trame:U1|mode_switch:MS|active_rot         ; coor_to_trame:U1|Selector10 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                             ;                        ;
++----------------------------------------------------+-----------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-------------------------------------------------------------+---------------------------------------------+
+; Register name                                               ; Reason for Removal                          ;
++-------------------------------------------------------------+---------------------------------------------+
+; coor_to_trame:U1|s_oh_reg[10..15]                           ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_id_reg1[0,2..7]                          ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_id_reg2[0,2..7]                          ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_mvt_reg[10..15]                          ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_twi_reg1[10..16,21..23,26..31,33,35..39] ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_twi_reg2[10..16,21..23,26..31,33,35..39] ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_len_reg[1,3..7]                          ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_ins_reg[2..7]                            ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_adr_reg[0,5..7]                          ; Stuck at GND due to stuck port data_in      ;
+; coor_to_trame:U1|s_twi_reg1[9]                              ; Merged with coor_to_trame:U1|s_mvt_reg[9]   ;
+; coor_to_trame:U1|s_twi_reg1[8]                              ; Merged with coor_to_trame:U1|s_mvt_reg[8]   ;
+; coor_to_trame:U1|s_twi_reg1[7]                              ; Merged with coor_to_trame:U1|s_mvt_reg[7]   ;
+; coor_to_trame:U1|s_twi_reg1[6]                              ; Merged with coor_to_trame:U1|s_mvt_reg[6]   ;
+; coor_to_trame:U1|s_twi_reg1[5]                              ; Merged with coor_to_trame:U1|s_mvt_reg[5]   ;
+; coor_to_trame:U1|s_twi_reg1[4]                              ; Merged with coor_to_trame:U1|s_mvt_reg[4]   ;
+; coor_to_trame:U1|s_twi_reg1[3]                              ; Merged with coor_to_trame:U1|s_mvt_reg[3]   ;
+; coor_to_trame:U1|s_twi_reg1[2]                              ; Merged with coor_to_trame:U1|s_mvt_reg[2]   ;
+; coor_to_trame:U1|s_twi_reg1[1]                              ; Merged with coor_to_trame:U1|s_mvt_reg[1]   ;
+; coor_to_trame:U1|s_twi_reg1[0]                              ; Merged with coor_to_trame:U1|s_mvt_reg[0]   ;
+; coor_to_trame:U1|s_twi_reg2[19,20,24,25,32,34]              ; Merged with coor_to_trame:U1|s_id_reg2[1]   ;
+; coor_to_trame:U1|s_twi_reg2[18]                             ; Merged with coor_to_trame:U1|s_twi_reg2[17] ;
+; coor_to_trame:U1|s_adr_reg[4]                               ; Merged with coor_to_trame:U1|s_adr_reg[3]   ;
+; coor_to_trame:U1|s_id_reg1[1]                               ; Merged with coor_to_trame:U1|s_adr_reg[3]   ;
+; coor_to_trame:U1|s_ins_reg[0,1]                             ; Merged with coor_to_trame:U1|s_adr_reg[3]   ;
+; coor_to_trame:U1|s_len_reg[0,2]                             ; Merged with coor_to_trame:U1|s_adr_reg[3]   ;
+; coor_to_trame:U1|s_twi_reg1[19,20,24,25,32,34]              ; Merged with coor_to_trame:U1|s_adr_reg[3]   ;
+; coor_to_trame:U1|s_adr_reg[2]                               ; Merged with coor_to_trame:U1|s_adr_reg[1]   ;
+; coor_to_trame:U1|s_twi_reg1[17,18]                          ; Merged with coor_to_trame:U1|s_adr_reg[1]   ;
+; Total Number of Removed Registers = 118                     ;                                             ;
++-------------------------------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                    ;
++---------------------------------+---------------------------+------------------------------------------------------------------+
+; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                           ;
++---------------------------------+---------------------------+------------------------------------------------------------------+
+; coor_to_trame:U1|s_oh_reg[15]   ; Stuck at GND              ; coor_to_trame:U1|s_mvt_reg[15], coor_to_trame:U1|s_twi_reg1[15], ;
+;                                 ; due to stuck port data_in ; coor_to_trame:U1|s_twi_reg2[15]                                  ;
+; coor_to_trame:U1|s_oh_reg[14]   ; Stuck at GND              ; coor_to_trame:U1|s_mvt_reg[14], coor_to_trame:U1|s_twi_reg1[14], ;
+;                                 ; due to stuck port data_in ; coor_to_trame:U1|s_twi_reg2[14]                                  ;
+; coor_to_trame:U1|s_oh_reg[13]   ; Stuck at GND              ; coor_to_trame:U1|s_mvt_reg[13], coor_to_trame:U1|s_twi_reg1[13], ;
+;                                 ; due to stuck port data_in ; coor_to_trame:U1|s_twi_reg2[13]                                  ;
+; coor_to_trame:U1|s_oh_reg[12]   ; Stuck at GND              ; coor_to_trame:U1|s_mvt_reg[12], coor_to_trame:U1|s_twi_reg1[12], ;
+;                                 ; due to stuck port data_in ; coor_to_trame:U1|s_twi_reg2[12]                                  ;
+; coor_to_trame:U1|s_oh_reg[11]   ; Stuck at GND              ; coor_to_trame:U1|s_mvt_reg[11], coor_to_trame:U1|s_twi_reg1[11], ;
+;                                 ; due to stuck port data_in ; coor_to_trame:U1|s_twi_reg2[11]                                  ;
+; coor_to_trame:U1|s_oh_reg[10]   ; Stuck at GND              ; coor_to_trame:U1|s_mvt_reg[10], coor_to_trame:U1|s_twi_reg1[10], ;
+;                                 ; due to stuck port data_in ; coor_to_trame:U1|s_twi_reg2[10]                                  ;
+; coor_to_trame:U1|s_id_reg1[7]   ; Stuck at GND              ; coor_to_trame:U1|s_id_reg2[7]                                    ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_id_reg1[6]   ; Stuck at GND              ; coor_to_trame:U1|s_id_reg2[6]                                    ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_id_reg1[5]   ; Stuck at GND              ; coor_to_trame:U1|s_id_reg2[5]                                    ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_id_reg1[4]   ; Stuck at GND              ; coor_to_trame:U1|s_id_reg2[4]                                    ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_id_reg1[3]   ; Stuck at GND              ; coor_to_trame:U1|s_id_reg2[3]                                    ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_id_reg1[2]   ; Stuck at GND              ; coor_to_trame:U1|s_id_reg2[2]                                    ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_id_reg1[0]   ; Stuck at GND              ; coor_to_trame:U1|s_id_reg2[0]                                    ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[39] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[39]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[38] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[38]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[37] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[37]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[36] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[36]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[35] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[35]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[33] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[33]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[31] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[31]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[30] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[30]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[29] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[29]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[28] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[28]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[27] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[27]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[26] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[26]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[23] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[23]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[22] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[22]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[21] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[21]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
+; coor_to_trame:U1|s_twi_reg1[16] ; Stuck at GND              ; coor_to_trame:U1|s_twi_reg2[16]                                  ;
+;                                 ; due to stuck port data_in ;                                                                  ;
++---------------------------------+---------------------------+------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 105   ;
+; Number of registers using Synchronous Clear  ; 23    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 65    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 28    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 4:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |top_72_to_serial|UART_TX:U3|r_Clk_Count[9] ;
+; 13:1               ; 3 bits    ; 24 LEs        ; 18 LEs               ; 6 LEs                  ; Yes        ; |top_72_to_serial|decode_servo:U2|r[7]      ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 16 LEs               ; 6 LEs                  ; Yes        ; |top_72_to_serial|decode_servo:U2|r[4]      ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |top_72_to_serial|UART_TX:U3|r_Bit_Index    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++------------------------------------------------------------+
+; Source assignments for Top-level Entity: |top_72_to_serial ;
++------------+----------+------+-----------------------------+
+; Assignment ; Value    ; From ; To                          ;
++------------+----------+------+-----------------------------+
+; LOCATION   ; Pin_AF14 ; -    ; clk                         ;
+; LOCATION   ; Pin_AB12 ; -    ; rst                         ;
+; LOCATION   ; Pin_AC12 ; -    ; htop                        ;
+; LOCATION   ; Pin_AF9  ; -    ; modetop                     ;
+; LOCATION   ; Pin_V16  ; -    ; LedR                        ;
+; LOCATION   ; Pin_AK16 ; -    ; serial_out                  ;
++------------+----------+------+-----------------------------+
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UART_TX:U3 ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; g_CLKS_PER_BIT ; 1302  ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decode_servo:U2"                                                                                             ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                                                  ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; trametop ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 105                         ;
+;     CLR               ; 54                          ;
+;     CLR SCLR          ; 11                          ;
+;     ENA               ; 16                          ;
+;     ENA SCLR          ; 12                          ;
+;     plain             ; 12                          ;
+; arriav_lcell_comb     ; 110                         ;
+;     arith             ; 19                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 4                           ;
+;         4 data inputs ; 1                           ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 87                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 21                          ;
+;         5 data inputs ; 11                          ;
+;         6 data inputs ; 33                          ;
+; boundary_port         ; 16                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.08                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
+    Info: Processing started: Mon Jan 14 12:27:55 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Moteur -c Moteur
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/UART_TX.vhd
+    Info (12022): Found design unit 1: UART_TX-RTL
+    Info (12023): Found entity 1: UART_TX
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/trame_assembler.vhd
+    Info (12022): Found design unit 1: trame_assembler-TA
+    Info (12023): Found entity 1: trame_assembler
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/top_72_to_serial.vhd
+    Info (12022): Found design unit 1: top_72_to_serial-A_72_to_serial
+    Info (12023): Found entity 1: top_72_to_serial
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/mode_switch.vhd
+    Info (12022): Found design unit 1: mode_switch-MS
+    Info (12023): Found entity 1: mode_switch
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/instruction.vhd
+    Info (12022): Found design unit 1: instruction-I
+    Info (12023): Found entity 1: instruction
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/identifier.vhd
+    Info (12022): Found design unit 1: identifier-id
+    Info (12023): Found entity 1: identifier
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/decode_servo.vhd
+    Info (12022): Found design unit 1: decode_servo-A_decode
+    Info (12023): Found entity 1: decode_servo
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/coor_to_trame.vhd
+    Info (12022): Found design unit 1: coor_to_trame-CT
+    Info (12023): Found entity 1: coor_to_trame
+Info (12021): Found 2 design units, including 1 entities, in source file /tp/xph3app/xph3app602/Camera_robot/Moteur/VHD/checksum.vhd
+    Info (12022): Found design unit 1: checksum-S
+    Info (12023): Found entity 1: checksum
+Info (12127): Elaborating entity "top_72_to_serial" for the top level hierarchy
+Info (12128): Elaborating entity "coor_to_trame" for hierarchy "coor_to_trame:U1"
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(207): signal "s_x_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(208): signal "s_mode_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(209): signal "s_h_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(216): signal "s_x_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(217): signal "s_mode_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(218): signal "s_h_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(225): signal "s_x_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(226): signal "s_mode_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(227): signal "s_h_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(237): signal "s_x_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(238): signal "s_mode_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(239): signal "s_h_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at coor_to_trame.vhd(242): signal "new_trame" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "mode_switch" for hierarchy "coor_to_trame:U1|mode_switch:MS"
+Warning (10631): VHDL Process Statement warning at mode_switch.vhd(34): inferring latch(es) for signal or variable "active_rot", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "active_rot" at mode_switch.vhd(34)
+Info (12128): Elaborating entity "identifier" for hierarchy "coor_to_trame:U1|identifier:ID"
+Info (12128): Elaborating entity "instruction" for hierarchy "coor_to_trame:U1|instruction:INS"
+Warning (10540): VHDL Signal Declaration warning at instruction.vhd(31): used explicit default value for signal "s_len" because signal was never assigned a value
+Warning (10540): VHDL Signal Declaration warning at instruction.vhd(32): used explicit default value for signal "s_ins" because signal was never assigned a value
+Warning (10492): VHDL Process Statement warning at instruction.vhd(43): signal "s_len" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at instruction.vhd(43): signal "s_ins" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at instruction.vhd(43): signal "s_adr" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at instruction.vhd(43): signal "trame_wo_instru" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "checksum" for hierarchy "coor_to_trame:U1|checksum:CS"
+Info (12128): Elaborating entity "trame_assembler" for hierarchy "coor_to_trame:U1|trame_assembler:TA"
+Warning (10540): VHDL Signal Declaration warning at trame_assembler.vhd(24): used explicit default value for signal "header" because signal was never assigned a value
+Info (12128): Elaborating entity "decode_servo" for hierarchy "decode_servo:U2"
+Warning (10541): VHDL Signal Declaration warning at decode_servo.vhd(19): used implicit default value for signal "trametop" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info (12128): Elaborating entity "UART_TX" for hierarchy "UART_TX:U3"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch coor_to_trame:U1|mode_switch:MS|active_rot has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal coor_to_trame:U1|curr_state.S1
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 183 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 167 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 860 megabytes
+    Info: Processing ended: Mon Jan 14 12:28:00 2019
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:04
+
+

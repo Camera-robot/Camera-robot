@@ -1,0 +1,111 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/Simu_barycentre/simulation/modelsim
+T_opt
+!s110 1544733285
+V3EhUI>W:L<O;RF4hQW@0P1
+04 18 15 work barycentre_vhd_tst barycentre_arch 1
+=1-f01fafcf3247-5c12c264-5d16f-3061
+o-quiet -auto_acc_if_foreign -work gate_work +acc
+tCvgOpt 0
+n@_opt
+OL;O;10.5c;63
+Ebarycentre
+Z1 w1544732874
+Z2 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 ?7zSSG=>8N9QcLUR`^Hbb2
+Z3 DPx9 cycloneiv 20 cycloneiv_components 0 22 `]If39`ZnmDFan=SeUViJ3
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 ZQ]VGMHaJ[GMZ@f@b6[AU2
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 18Ti78zfmJ`i`agjOM[]Q2
+R0
+Z10 8barycentre_6_1200mv_85c_slow.vho
+Z11 Fbarycentre_6_1200mv_85c_slow.vho
+l0
+L37
+VeH4USaNL=oVV3XT4gZ97[2
+!s100 b21mWCLhPn6^>N9;FofW_2
+Z12 OL;C;10.5c;63
+31
+!s110 1544733205
+!i10b 1
+Z13 !s108 1544733205.000000
+Z14 !s90 -reportprogress|300|-93|-work|work|barycentre_6_1200mv_85c_slow.vho|
+Z15 !s107 barycentre_6_1200mv_85c_slow.vho|
+!i113 0
+Z16 o-93 -work work
+Z17 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 10 barycentre 0 22 eH4USaNL=oVV3XT4gZ97[2
+l2221
+L145
+Vb2=7Gi?=iPC6?eRKVDiUz0
+!s100 2C?1Zf3jg1i?;XV?SVKnd2
+R12
+31
+!s110 1544733206
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Ebarycentre_vhd_tst
+Z18 w1544542078
+Z19 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R7
+R8
+R0
+Z20 8/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/Simu_barycentre/simulation/modelsim/barycentre.vht
+Z21 F/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/Simu_barycentre/simulation/modelsim/barycentre.vht
+l0
+L32
+Vf:3WJ9:Aoc5ikZN2GT9183
+!s100 eDlRecT9?7a80<nhMenNF3
+R12
+32
+Z22 !s110 1544733271
+!i10b 1
+Z23 !s108 1544733271.000000
+Z24 !s90 -reportprogress|300|-work|work|/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/Simu_barycentre/simulation/modelsim/barycentre.vht|
+Z25 !s107 /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/Simu_barycentre/simulation/modelsim/barycentre.vht|
+!i113 0
+Z26 o-work work
+R17
+Abarycentre_arch
+R19
+R7
+R8
+DEx4 work 18 barycentre_vhd_tst 0 22 f:3WJ9:Aoc5ikZN2GT9183
+l63
+L34
+VK06O_0456V85IbN6WZIEN2
+!s100 jVLIP_GI@Ud`2Ka_3FlWX1
+R12
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R26
+R17

@@ -1,0 +1,2811 @@
+# //  ModelSim SE-64 10.5c Jul 20 2016Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2016 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do barycentre_run_msim_gate_vhdl.do
+# if ![file isdirectory vhdl_libs] {
+# 	file mkdir vhdl_libs
+# }
+# 
+# vlib vhdl_libs/altera_mf
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera_mf".
+# vmap altera_mf ./vhdl_libs/altera_mf
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap altera_mf ./vhdl_libs/altera_mf 
+# Copying /softl3/modelsim10_5c/modeltech/linux_x86_64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# vcom -93 -work altera_mf {/softslin/altera14_0/quartus/eda/sim_lib/altera_mf_components.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:29:19 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera_mf /softslin/altera14_0/quartus/eda/sim_lib/altera_mf_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package altera_mf_components
+# End time: 21:29:19 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera_mf {/softslin/altera14_0/quartus/eda/sim_lib/altera_mf.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:29:21 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera_mf /softslin/altera14_0/quartus/eda/sim_lib/altera_mf.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity LCELL
+# -- Compiling architecture BEHAVIOR of LCELL
+# -- Compiling package ALTERA_COMMON_CONVERSION
+# -- Compiling package body ALTERA_COMMON_CONVERSION
+# -- Loading package ALTERA_COMMON_CONVERSION
+# -- Compiling package ALTERA_MF_HINT_EVALUATION
+# -- Compiling package body ALTERA_MF_HINT_EVALUATION
+# -- Loading package ALTERA_MF_HINT_EVALUATION
+# -- Compiling package ALTERA_DEVICE_FAMILIES
+# -- Compiling package body ALTERA_DEVICE_FAMILIES
+# -- Loading package ALTERA_DEVICE_FAMILIES
+# -- Compiling package MF_pllpack
+# -- Compiling package body MF_pllpack
+# -- Loading package MF_pllpack
+# -- Compiling entity DFFP
+# -- Compiling architecture behave of DFFP
+# -- Compiling entity pll_iobuf
+# -- Compiling architecture BEHAVIOR of pll_iobuf
+# -- Compiling entity MF_m_cntr
+# -- Compiling architecture behave of MF_m_cntr
+# -- Compiling entity MF_n_cntr
+# -- Compiling architecture behave of MF_n_cntr
+# -- Compiling entity stx_scale_cntr
+# -- Compiling architecture behave of stx_scale_cntr
+# -- Compiling entity MF_pll_reg
+# -- Compiling architecture behave of MF_pll_reg
+# -- Loading package MF_pllpack
+# -- Loading entity MF_m_cntr
+# -- Loading entity MF_n_cntr
+# -- Loading entity stx_scale_cntr
+# -- Loading entity DFFP
+# -- Loading entity MF_pll_reg
+# -- Compiling entity MF_stratix_pll
+# -- Compiling architecture vital_pll of MF_stratix_pll
+# -- Compiling entity arm_m_cntr
+# -- Compiling architecture behave of arm_m_cntr
+# -- Compiling entity arm_n_cntr
+# -- Compiling architecture behave of arm_n_cntr
+# -- Compiling entity arm_scale_cntr
+# -- Compiling architecture behave of arm_scale_cntr
+# -- Loading entity arm_m_cntr
+# -- Loading entity arm_n_cntr
+# -- Loading entity arm_scale_cntr
+# -- Compiling entity MF_stratixii_pll
+# -- Compiling architecture vital_pll of MF_stratixii_pll
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity MF_ttn_mn_cntr
+# -- Compiling architecture behave of MF_ttn_mn_cntr
+# -- Compiling entity MF_ttn_scale_cntr
+# -- Compiling architecture behave of MF_ttn_scale_cntr
+# -- Loading entity MF_ttn_mn_cntr
+# -- Loading entity MF_ttn_scale_cntr
+# -- Compiling entity MF_stratixiii_pll
+# -- Compiling architecture vital_pll of MF_stratixiii_pll
+# -- Compiling entity MF_cda_mn_cntr
+# -- Compiling architecture behave of MF_cda_mn_cntr
+# -- Compiling entity MF_cda_scale_cntr
+# -- Compiling architecture behave of MF_cda_scale_cntr
+# -- Loading entity MF_cda_mn_cntr
+# -- Loading entity MF_cda_scale_cntr
+# -- Compiling entity MF_cycloneiii_pll
+# -- Compiling architecture vital_pll of MF_cycloneiii_pll
+# -- Compiling entity MF_stingray_mn_cntr
+# -- Compiling architecture behave of MF_stingray_mn_cntr
+# -- Compiling entity MF_stingray_post_divider
+# -- Compiling architecture behave of MF_stingray_post_divider
+# -- Compiling entity MF_stingray_scale_cntr
+# -- Compiling architecture behave of MF_stingray_scale_cntr
+# -- Loading entity MF_stingray_mn_cntr
+# -- Loading entity MF_stingray_scale_cntr
+# -- Compiling entity MF_cycloneiiigl_pll
+# -- Compiling architecture vital_pll of MF_cycloneiiigl_pll
+# -- Loading package ALTERA_DEVICE_FAMILIES
+# -- Loading entity MF_stratix_pll
+# -- Loading entity MF_stratixii_pll
+# -- Loading entity MF_stratixiii_pll
+# -- Loading entity MF_cycloneiii_pll
+# -- Loading entity MF_cycloneiiigl_pll
+# -- Loading entity pll_iobuf
+# -- Compiling entity altpll
+# -- Compiling architecture behavior of altpll
+# -- Compiling entity altaccumulate
+# -- Compiling architecture behaviour of altaccumulate
+# -- Compiling entity altmult_accum
+# -- Compiling architecture behaviour of altmult_accum
+# -- Compiling entity altmult_add
+# -- Compiling architecture behaviour of altmult_add
+# -- Loading package ALTERA_COMMON_CONVERSION
+# -- Compiling entity altfp_mult
+# -- Compiling architecture behavior of altfp_mult
+# -- Compiling entity altsqrt
+# -- Compiling architecture behavior of altsqrt
+# -- Compiling entity altclklock
+# -- Compiling architecture behavior of altclklock
+# -- Compiling entity altddio_in
+# -- Compiling architecture behave of altddio_in
+# -- Compiling entity altddio_out
+# -- Compiling architecture behave of altddio_out
+# -- Loading entity altddio_in
+# -- Loading entity altddio_out
+# -- Compiling entity altddio_bidir
+# -- Compiling architecture struct of altddio_bidir
+# -- Compiling entity stratixii_lvds_rx
+# -- Compiling architecture behavior of stratixii_lvds_rx
+# -- Compiling entity flexible_lvds_rx
+# -- Compiling architecture behavior of flexible_lvds_rx
+# -- Compiling entity stratixiii_lvds_rx_dpa
+# -- Compiling architecture behavior of stratixiii_lvds_rx_dpa
+# -- Compiling entity stratixv_local_clk_divider
+# -- Compiling architecture behavior of stratixv_local_clk_divider
+# -- Loading entity stratixiii_lvds_rx_dpa
+# -- Loading entity stratixv_local_clk_divider
+# -- Compiling entity stratixiii_lvds_rx_channel
+# -- Compiling architecture behavior of stratixiii_lvds_rx_channel
+# -- Loading entity stratixiii_lvds_rx_channel
+# -- Compiling entity stratixiii_lvds_rx
+# -- Compiling architecture behavior of stratixiii_lvds_rx
+# -- Loading entity stratixii_lvds_rx
+# -- Loading entity flexible_lvds_rx
+# -- Loading entity stratixiii_lvds_rx
+# -- Compiling entity altlvds_rx
+# -- Compiling architecture behavior of altlvds_rx
+# -- Compiling entity stratix_tx_outclk
+# -- Compiling architecture behavior of stratix_tx_outclk
+# -- Compiling entity stratixii_tx_outclk
+# -- Compiling architecture behavior of stratixii_tx_outclk
+# -- Compiling entity flexible_lvds_tx
+# -- Compiling architecture behavior of flexible_lvds_tx
+# -- Loading entity stratix_tx_outclk
+# -- Loading entity stratixii_tx_outclk
+# -- Loading entity flexible_lvds_tx
+# -- Compiling entity altlvds_tx
+# -- Compiling architecture behavior of altlvds_tx
+# -- Compiling entity altdpram
+# -- Compiling architecture behavior of altdpram
+# -- Compiling entity altsyncram
+# -- Compiling architecture translated of altsyncram
+# -- Loading entity altsyncram
+# -- Loading package ALTERA_MF_HINT_EVALUATION
+# -- Compiling entity alt3pram
+# -- Compiling architecture behavior of alt3pram
+# -- Loading package altera_mf_components
+# -- Compiling entity parallel_add
+# -- Compiling architecture behaviour of parallel_add
+# -- Compiling entity SCFIFO
+# -- Compiling architecture behavior of SCFIFO
+# -- Compiling entity DCFIFO_DFFPIPE
+# -- Compiling architecture behavior of DCFIFO_DFFPIPE
+# -- Compiling entity DCFIFO_FEFIFO
+# -- Compiling architecture behavior of DCFIFO_FEFIFO
+# -- Loading entity DCFIFO_FEFIFO
+# -- Loading entity DCFIFO_DFFPIPE
+# -- Compiling entity DCFIFO_ASYNC
+# -- Compiling architecture behavior of DCFIFO_ASYNC
+# -- Compiling entity DCFIFO_SYNC
+# -- Compiling architecture behavior of DCFIFO_SYNC
+# -- Compiling entity DCFIFO_LOW_LATENCY
+# -- Compiling architecture behavior of DCFIFO_LOW_LATENCY
+# -- Loading entity DCFIFO_ASYNC
+# -- Loading entity DCFIFO_SYNC
+# -- Loading entity DCFIFO_LOW_LATENCY
+# -- Compiling entity DCFIFO_MIXED_WIDTHS
+# -- Compiling architecture behavior of DCFIFO_MIXED_WIDTHS
+# -- Loading entity DCFIFO_MIXED_WIDTHS
+# -- Compiling entity DCFIFO
+# -- Compiling architecture behavior of DCFIFO
+# -- Compiling entity altshift_taps
+# -- Compiling architecture behavioural of altshift_taps
+# -- Compiling entity A_GRAYCOUNTER
+# -- Compiling architecture behavior of A_GRAYCOUNTER
+# -- Compiling entity altsquare
+# -- Compiling architecture altsquare_syn of altsquare
+# -- Compiling entity altera_std_synchronizer
+# -- Compiling architecture behavioral of altera_std_synchronizer
+# -- Compiling entity altera_std_synchronizer_bundle
+# -- Compiling architecture behavioral of altera_std_synchronizer_bundle
+# -- Compiling entity alt_cal
+# -- Compiling architecture RTL of alt_cal
+# -- Compiling entity alt_cal_mm
+# -- Compiling architecture RTL of alt_cal_mm
+# -- Compiling entity alt_cal_c3gxb
+# -- Compiling architecture RTL of alt_cal_c3gxb
+# -- Compiling entity alt_cal_sv
+# -- Compiling architecture RTL of alt_cal_sv
+# -- Compiling entity alt_cal_av
+# -- Compiling architecture RTL of alt_cal_av
+# -- Compiling package alt_aeq_s4_func
+# -- Compiling package body alt_aeq_s4_func
+# -- Loading package alt_aeq_s4_func
+# -- Loading package alt_aeq_s4_func
+# -- Compiling entity alt_aeq_s4
+# -- Compiling architecture trans of alt_aeq_s4
+# -- Compiling package alt_eyemon_func
+# -- Compiling package body alt_eyemon_func
+# -- Loading package alt_eyemon_func
+# -- Loading package alt_eyemon_func
+# -- Compiling entity alt_eyemon
+# -- Compiling architecture trans of alt_eyemon
+# -- Compiling package alt_dfe_func
+# -- Compiling package body alt_dfe_func
+# -- Loading package alt_dfe_func
+# -- Loading package alt_dfe_func
+# -- Compiling entity alt_dfe
+# -- Compiling architecture trans of alt_dfe
+# -- Compiling package SLD_NODE
+# -- Compiling package body SLD_NODE
+# -- Loading package SLD_NODE
+# -- Loading package SLD_NODE
+# -- Compiling entity signal_gen
+# -- Compiling architecture simModel of signal_gen
+# -- Compiling entity jtag_tap_controller
+# -- Compiling architecture FSM of jtag_tap_controller
+# -- Compiling entity dummy_hub
+# -- Compiling architecture behavior of dummy_hub
+# -- Loading entity signal_gen
+# -- Loading entity jtag_tap_controller
+# -- Loading entity dummy_hub
+# -- Compiling entity sld_virtual_jtag
+# -- Compiling architecture structural of sld_virtual_jtag
+# -- Compiling entity sld_signaltap
+# -- Compiling architecture sim_sld_signaltap of sld_signaltap
+# -- Compiling entity altstratixii_oct
+# -- Compiling architecture sim_altstratixii_oct of altstratixii_oct
+# -- Compiling entity altparallel_flash_loader
+# -- Compiling architecture sim_altparallel_flash_loader of altparallel_flash_loader
+# -- Compiling entity altserial_flash_loader
+# -- Compiling architecture sim_altserial_flash_loader of altserial_flash_loader
+# -- Compiling entity sld_virtual_jtag_basic
+# -- Compiling architecture sim_sld_virtual_jtag_basic of sld_virtual_jtag_basic
+# -- Compiling entity altsource_probe
+# -- Compiling architecture sim_altsource_probe of altsource_probe
+# End time: 21:29:22 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/altera
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/altera".
+# vmap altera ./vhdl_libs/altera
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap altera ./vhdl_libs/altera 
+# Modifying modelsim.ini
+# vcom -93 -work altera {/softslin/altera14_0/quartus/eda/sim_lib/altera_syn_attributes.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:29:54 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera /softslin/altera14_0/quartus/eda/sim_lib/altera_syn_attributes.vhd 
+# -- Loading package STANDARD
+# -- Compiling package altera_syn_attributes
+# End time: 21:29:54 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/softslin/altera14_0/quartus/eda/sim_lib/altera_standard_functions.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:29:55 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera /softslin/altera14_0/quartus/eda/sim_lib/altera_standard_functions.vhd 
+# -- Loading package STANDARD
+# -- Compiling package altera_standard_functions
+# -- Compiling package body altera_standard_functions
+# -- Loading package altera_standard_functions
+# End time: 21:29:55 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/softslin/altera14_0/quartus/eda/sim_lib/alt_dspbuilder_package.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:29:56 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera /softslin/altera14_0/quartus/eda/sim_lib/alt_dspbuilder_package.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Compiling package alt_dspbuilder_package
+# -- Compiling package body alt_dspbuilder_package
+# -- Loading package alt_dspbuilder_package
+# End time: 21:29:56 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/softslin/altera14_0/quartus/eda/sim_lib/altera_europa_support_lib.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:29:57 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera /softslin/altera14_0/quartus/eda/sim_lib/altera_europa_support_lib.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package altera_europa_support_lib
+# -- Compiling package body altera_europa_support_lib
+# -- Loading package altera_europa_support_lib
+# End time: 21:29:58 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/softslin/altera14_0/quartus/eda/sim_lib/altera_primitives_components.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:29:59 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera /softslin/altera14_0/quartus/eda/sim_lib/altera_primitives_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package dffeas_pack
+# -- Loading package dffeas_pack
+# -- Compiling package altera_primitives_components
+# End time: 21:29:59 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work altera {/softslin/altera14_0/quartus/eda/sim_lib/altera_primitives.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:30:01 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work altera /softslin/altera14_0/quartus/eda/sim_lib/altera_primitives.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity GLOBAL
+# -- Compiling architecture BEHAVIOR of GLOBAL
+# -- Compiling entity CARRY
+# -- Compiling architecture BEHAVIOR of CARRY
+# -- Compiling entity CASCADE
+# -- Compiling architecture BEHAVIOR of CASCADE
+# -- Compiling entity CARRY_SUM
+# -- Compiling architecture BEHAVIOR of CARRY_SUM
+# -- Compiling entity EXP
+# -- Compiling architecture BEHAVIOR of EXP
+# -- Compiling entity SOFT
+# -- Compiling architecture BEHAVIOR of SOFT
+# -- Compiling entity OPNDRN
+# -- Compiling architecture BEHAVIOR of OPNDRN
+# -- Compiling entity ROW_GLOBAL
+# -- Compiling architecture BEHAVIOR of ROW_GLOBAL
+# -- Compiling entity TRI
+# -- Compiling architecture BEHAVIOR of TRI
+# -- Compiling entity LUT_INPUT
+# -- Compiling architecture BEHAVIOR of LUT_INPUT
+# -- Compiling entity LUT_OUTPUT
+# -- Compiling architecture BEHAVIOR of LUT_OUTPUT
+# -- Compiling entity latch
+# -- Compiling architecture BEHAVIOR of latch
+# -- Compiling entity dlatch
+# -- Compiling architecture BEHAVIOR of dlatch
+# -- Compiling entity PRIM_GDFF
+# -- Compiling architecture BEHAVIOR of PRIM_GDFF
+# -- Loading entity PRIM_GDFF
+# -- Compiling entity DFF
+# -- Compiling architecture BEHAVIOR of DFF
+# -- Compiling entity DFFE
+# -- Compiling architecture BEHAVIOR of DFFE
+# -- Compiling entity DFFEA
+# -- Compiling architecture BEHAVIOR of DFFEA
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Compiling entity DFFEAS
+# -- Compiling architecture vital_dffeas of dffeas
+# -- Compiling entity PRIM_GTFF
+# -- Compiling architecture BEHAVIOR of PRIM_GTFF
+# -- Loading entity PRIM_GTFF
+# -- Compiling entity TFF
+# -- Compiling architecture BEHAVIOR of TFF
+# -- Compiling entity TFFE
+# -- Compiling architecture BEHAVIOR of TFFE
+# -- Compiling entity PRIM_GJKFF
+# -- Compiling architecture BEHAVIOR of PRIM_GJKFF
+# -- Loading entity PRIM_GJKFF
+# -- Compiling entity JKFF
+# -- Compiling architecture BEHAVIOR of JKFF
+# -- Compiling entity JKFFE
+# -- Compiling architecture BEHAVIOR of JKFFE
+# -- Compiling entity PRIM_GSRFF
+# -- Compiling architecture BEHAVIOR of PRIM_GSRFF
+# -- Loading entity PRIM_GSRFF
+# -- Compiling entity SRFF
+# -- Compiling architecture BEHAVIOR of SRFF
+# -- Compiling entity SRFFE
+# -- Compiling architecture BEHAVIOR of SRFFE
+# -- Compiling entity clklock
+# -- Compiling architecture behavior of clklock
+# -- Compiling entity alt_inbuf
+# -- Compiling architecture BEHAVIOR of alt_inbuf
+# -- Compiling entity alt_outbuf
+# -- Compiling architecture BEHAVIOR of alt_outbuf
+# -- Compiling entity alt_outbuf_tri
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri
+# -- Compiling entity alt_iobuf
+# -- Compiling architecture BEHAVIOR of alt_iobuf
+# -- Compiling entity alt_inbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_inbuf_diff
+# -- Compiling entity alt_outbuf_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_diff
+# -- Compiling entity alt_outbuf_tri_diff
+# -- Compiling architecture BEHAVIOR of alt_outbuf_tri_diff
+# -- Compiling entity alt_iobuf_diff
+# -- Compiling architecture BEHAVIOR of alt_iobuf_diff
+# -- Compiling entity alt_bidir_diff
+# -- Compiling architecture BEHAVIOR of alt_bidir_diff
+# -- Compiling entity alt_bidir_buf
+# -- Compiling architecture BEHAVIOR of alt_bidir_buf
+# End time: 21:30:01 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/lpm
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/lpm".
+# vmap lpm ./vhdl_libs/lpm
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap lpm ./vhdl_libs/lpm 
+# Modifying modelsim.ini
+# vcom -93 -work lpm {/softslin/altera14_0/quartus/eda/sim_lib/220pack.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:30:09 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work lpm /softslin/altera14_0/quartus/eda/sim_lib/220pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package LPM_COMPONENTS
+# End time: 21:30:09 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work lpm {/softslin/altera14_0/quartus/eda/sim_lib/220model.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:30:11 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work lpm /softslin/altera14_0/quartus/eda/sim_lib/220model.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package LPM_COMMON_CONVERSION
+# -- Compiling package body LPM_COMMON_CONVERSION
+# -- Loading package LPM_COMMON_CONVERSION
+# -- Compiling package LPM_HINT_EVALUATION
+# -- Compiling package body LPM_HINT_EVALUATION
+# -- Loading package LPM_HINT_EVALUATION
+# -- Compiling package LPM_DEVICE_FAMILIES
+# -- Compiling package body LPM_DEVICE_FAMILIES
+# -- Loading package LPM_DEVICE_FAMILIES
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity LPM_CONSTANT
+# -- Compiling architecture LPM_SYN of LPM_CONSTANT
+# -- Compiling entity LPM_INV
+# -- Compiling architecture LPM_SYN of LPM_INV
+# -- Compiling entity lpm_and
+# -- Compiling architecture LPM_SYN of lpm_and
+# -- Compiling entity LPM_OR
+# -- Compiling architecture LPM_SYN of LPM_OR
+# -- Compiling entity LPM_XOR
+# -- Compiling architecture LPM_SYN of LPM_XOR
+# -- Compiling entity LPM_BUSTRI
+# -- Compiling architecture LPM_SYN of LPM_BUSTRI
+# -- Compiling entity LPM_MUX
+# -- Compiling architecture LPM_SYN of LPM_MUX
+# -- Compiling entity LPM_DECODE
+# -- Compiling architecture LPM_SYN of LPM_DECODE
+# -- Compiling entity LPM_CLSHIFT
+# -- Compiling architecture LPM_SYN of LPM_CLSHIFT
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity LPM_ADD_SUB_SIGNED
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB_SIGNED
+# -- Compiling entity LPM_ADD_SUB_UNSIGNED
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB_UNSIGNED
+# -- Loading entity LPM_ADD_SUB_SIGNED
+# -- Loading entity LPM_ADD_SUB_UNSIGNED
+# -- Compiling entity LPM_ADD_SUB
+# -- Compiling architecture LPM_SYN of LPM_ADD_SUB
+# -- Compiling entity LPM_COMPARE_SIGNED
+# -- Compiling architecture LPM_SYN of LPM_COMPARE_SIGNED
+# -- Compiling entity LPM_COMPARE_UNSIGNED
+# -- Compiling architecture LPM_SYN of LPM_COMPARE_UNSIGNED
+# -- Loading entity LPM_COMPARE_SIGNED
+# -- Loading entity LPM_COMPARE_UNSIGNED
+# -- Compiling entity LPM_COMPARE
+# -- Compiling architecture LPM_SYN of LPM_COMPARE
+# -- Loading package LPM_HINT_EVALUATION
+# -- Compiling entity LPM_MULT
+# -- Compiling architecture LPM_SYN of LPM_MULT
+# -- Compiling entity LPM_DIVIDE
+# -- Compiling architecture behave of lpm_divide
+# -- Compiling entity lpm_abs
+# -- Compiling architecture LPM_SYN of LPM_ABS
+# -- Loading package LPM_COMMON_CONVERSION
+# -- Compiling entity LPM_COUNTER
+# -- Compiling architecture LPM_SYN of LPM_COUNTER
+# -- Compiling entity LPM_LATCH
+# -- Compiling architecture LPM_SYN of LPM_LATCH
+# -- Compiling entity LPM_FF
+# -- Compiling architecture LPM_SYN of LPM_FF
+# -- Compiling entity LPM_SHIFTREG
+# -- Compiling architecture LPM_SYN of LPM_SHIFTREG
+# -- Loading package LPM_DEVICE_FAMILIES
+# -- Compiling entity LPM_RAM_DQ
+# -- Compiling architecture LPM_SYN of lpm_ram_dq
+# -- Compiling entity LPM_RAM_DP
+# -- Compiling architecture LPM_SYN of LPM_RAM_DP
+# -- Compiling entity LPM_RAM_IO
+# -- Compiling architecture LPM_SYN of lpm_ram_io
+# -- Compiling entity LPM_ROM
+# -- Compiling architecture LPM_SYN of lpm_rom
+# -- Compiling entity LPM_FIFO
+# -- Compiling architecture behavior of LPM_FIFO
+# -- Compiling entity LPM_FIFO_DC_DFFPIPE
+# -- Compiling architecture behavior of LPM_FIFO_DC_DFFPIPE
+# -- Compiling entity LPM_FIFO_DC_FEFIFO
+# -- Compiling architecture behavior of LPM_FIFO_DC_FEFIFO
+# -- Loading entity LPM_FIFO_DC_FEFIFO
+# -- Loading entity LPM_FIFO_DC_DFFPIPE
+# -- Compiling entity LPM_FIFO_DC_ASYNC
+# -- Compiling architecture behavior of LPM_FIFO_DC_ASYNC
+# -- Loading entity LPM_FIFO_DC_ASYNC
+# -- Compiling entity LPM_FIFO_DC
+# -- Compiling architecture behavior of LPM_FIFO_DC
+# -- Compiling entity LPM_INpad
+# -- Compiling architecture LPM_SYN of LPM_INpad
+# -- Compiling entity LPM_OUTpad
+# -- Compiling architecture LPM_SYN of LPM_OUTpad
+# -- Compiling entity LPM_BIpad
+# -- Compiling architecture LPM_SYN of LPM_BIpad
+# End time: 21:30:11 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/sgate
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/sgate".
+# vmap sgate ./vhdl_libs/sgate
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap sgate ./vhdl_libs/sgate 
+# Modifying modelsim.ini
+# vcom -93 -work sgate {/softslin/altera14_0/quartus/eda/sim_lib/sgate_pack.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:30:21 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work sgate /softslin/altera14_0/quartus/eda/sim_lib/sgate_pack.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package sgate_pack
+# -- Compiling package body sgate_pack
+# -- Loading package sgate_pack
+# End time: 21:30:21 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work sgate {/softslin/altera14_0/quartus/eda/sim_lib/sgate.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:30:23 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work sgate /softslin/altera14_0/quartus/eda/sim_lib/sgate.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity oper_add
+# -- Compiling architecture sim_arch of oper_add
+# -- Compiling entity oper_addsub
+# -- Compiling architecture sim_arch of oper_addsub
+# -- Compiling entity mux21
+# -- Compiling architecture sim_arch of mux21
+# -- Compiling entity io_buf_tri
+# -- Compiling architecture sim_arch of io_buf_tri
+# -- Compiling entity io_buf_opdrn
+# -- Compiling architecture sim_arch of io_buf_opdrn
+# -- Compiling entity tri_bus
+# -- Compiling architecture sim_arch of tri_bus
+# -- Compiling entity oper_mult
+# -- Compiling architecture sim_arch of oper_mult
+# -- Loading package LPM_COMPONENTS
+# -- Compiling entity oper_div
+# -- Compiling architecture sim_arch of oper_div
+# -- Compiling entity oper_mod
+# -- Compiling architecture sim_arch of oper_mod
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity oper_left_shift
+# -- Compiling architecture sim_arch of oper_left_shift
+# -- Compiling entity oper_right_shift
+# -- Compiling architecture sim_arch of oper_right_shift
+# -- Compiling entity oper_rotate_left
+# -- Compiling architecture sim_arch of oper_rotate_left
+# -- Compiling entity oper_rotate_right
+# -- Compiling architecture sim_arch of oper_rotate_right
+# -- Compiling entity oper_less_than
+# -- Compiling architecture sim_arch of oper_less_than
+# -- Loading package sgate_pack
+# -- Compiling entity oper_mux
+# -- Compiling architecture sim_arch of oper_mux
+# -- Compiling entity oper_selector
+# -- Compiling architecture sim_arch of oper_selector
+# -- Compiling entity oper_prio_selector
+# -- Compiling architecture sim_arch of oper_prio_selector
+# -- Compiling entity oper_decoder
+# -- Compiling architecture sim_arch of oper_decoder
+# -- Compiling entity oper_bus_mux
+# -- Compiling architecture sim_arch of oper_bus_mux
+# -- Compiling entity oper_latch
+# -- Compiling architecture sim_arch of oper_latch
+# End time: 21:30:23 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/cycloneiv_hssi
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/cycloneiv_hssi".
+# vmap cycloneiv_hssi ./vhdl_libs/cycloneiv_hssi
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap cycloneiv_hssi ./vhdl_libs/cycloneiv_hssi 
+# Modifying modelsim.ini
+# vcom -93 -work cycloneiv_hssi {/softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_hssi_components.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:30:28 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work cycloneiv_hssi /softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_hssi_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package CYCLONEIV_HSSI_COMPONENTS
+# -- Compiling package body CYCLONEIV_HSSI_COMPONENTS
+# -- Loading package CYCLONEIV_HSSI_COMPONENTS
+# End time: 21:30:28 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work cycloneiv_hssi {/softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_hssi_atoms.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:30:30 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work cycloneiv_hssi /softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_hssi_atoms.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package CYCLONEIV_HSSI_COMPONENTS
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_reg
+# -- Compiling architecture vital_cycloneiv_hssi_tx_pma_sub_reg of cycloneiv_hssi_tx_pma_sub_reg
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_out_block
+# -- Compiling architecture vital_tx_out_block of cycloneiv_hssi_tx_pma_sub_out_block
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Compiling architecture vital_tx_reg of cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_reg
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_out_block
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_parallel_register
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_ser
+# -- Compiling architecture vital_transmitter_atom of cycloneiv_hssi_tx_pma_sub_ser
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling architecture div_by_2_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling architecture div_by_2_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_div_by_2
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Compiling architecture clk_gen_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling architecture rcv_det_sync_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Compiling architecture rcv_det_fsm_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_fsm
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_sync
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Compiling architecture rcv_det_control_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_clk_gen
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_control
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Compiling architecture rcv_det_digital_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Loading entity cycloneiv_hssi_tx_pma_sub_tx_rx_det_rcv_det_digital
+# -- Compiling entity cycloneiv_hssi_tx_pma_sub_tx_rx_det
+# -- Compiling architecture tx_rx_det_arch of cycloneiv_hssi_tx_pma_sub_tx_rx_det
+# -- Compiling entity cycloneiv_hssi_tx_pma
+# -- Compiling architecture trans of cycloneiv_hssi_tx_pma
+# -- Compiling entity cycloneiv_hssi_rx_pma_sub_deser
+# -- Compiling architecture trans of cycloneiv_hssi_rx_pma_sub_deser
+# -- Compiling entity cycloneiv_hssi_rx_pma_sub_clkdiv
+# -- Compiling architecture trans of cycloneiv_hssi_rx_pma_sub_clkdiv
+# -- Compiling entity cycloneiv_hssi_rx_pma
+# -- Compiling architecture trans of cycloneiv_hssi_rx_pma
+# -- Compiling entity cycloneiv_hssi_pcs_reset
+# -- Compiling architecture trans of cycloneiv_hssi_pcs_reset
+# -- Compiling entity cycloneiv_hssi_digi_chnl_hip_spt
+# -- Compiling architecture trans of cycloneiv_hssi_digi_chnl_hip_spt
+# -- Compiling entity cycloneiv_hssi_phystatus_generator_fsm
+# -- Compiling architecture trans of cycloneiv_hssi_phystatus_generator_fsm
+# -- Loading package sgate_pack
+# -- Compiling entity cycloneiv_hssi_phystatus_generator
+# -- Compiling architecture RTL of cycloneiv_hssi_phystatus_generator
+# -- Compiling entity cycloneiv_hssi_rx_pipe_interface
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_pipe_interface
+# -- Compiling entity cycloneiv_hssi_tx_pipe_interface
+# -- Compiling architecture RTL of cycloneiv_hssi_tx_pipe_interface
+# -- Compiling entity cycloneiv_hssi_q_pipe_interface_top
+# -- Compiling architecture trans of cycloneiv_hssi_q_pipe_interface_top
+# -- Compiling entity cycloneiv_hssi_tx_digis_txclk_gating
+# -- Compiling architecture trans of cycloneiv_hssi_tx_digis_txclk_gating
+# -- Compiling entity cycloneiv_hssi_tx_digi_txclk_ctl
+# -- Compiling architecture trans of cycloneiv_hssi_tx_digi_txclk_ctl
+# -- Compiling entity cycloneiv_hssi_tx_digis_ram8x49_syn
+# -- Compiling architecture trans of cycloneiv_hssi_tx_digis_ram8x49_syn
+# -- Compiling entity cycloneiv_hssi_tx_digis_ph_fifo
+# -- Compiling architecture trans of cycloneiv_hssi_tx_digis_ph_fifo
+# -- Compiling entity cycloneiv_hssi_tx_digi_tx_ctrl
+# -- Compiling architecture trans of cycloneiv_hssi_tx_digi_tx_ctrl
+# -- Compiling entity cycloneiv_hssi_tx_digi_bist_gen
+# -- Compiling architecture RTL of cycloneiv_hssi_tx_digi_bist_gen
+# -- Compiling entity cycloneiv_hssi_tx_digi_prbs_gen
+# -- Compiling architecture RTL of cycloneiv_hssi_tx_digi_prbs_gen
+# -- Compiling entity cycloneiv_hssi_tx_digi_enc_chnl_top
+# -- Compiling architecture RTL of cycloneiv_hssi_tx_digi_enc_chnl_top
+# -- Compiling entity cycloneiv_hssi_tx_digi_iq_pipe_tx
+# -- Compiling architecture RTL of cycloneiv_hssi_tx_digi_iq_pipe_tx
+# -- Compiling entity cycloneiv_hssi_tx_digi
+# -- Compiling architecture trans of cycloneiv_hssi_tx_digi
+# -- Compiling entity cycloneiv_hssi_tx_pcs
+# -- Compiling architecture trans of cycloneiv_hssi_tx_pcs
+# -- Compiling entity cycloneiv_hssi_rx_digis_ram8x70_syn
+# -- Compiling architecture trans of cycloneiv_hssi_rx_digis_ram8x70_syn
+# -- Compiling entity cycloneiv_hssi_rx_digis_ph_fifo
+# -- Compiling architecture trans of cycloneiv_hssi_rx_digis_ph_fifo
+# -- Compiling entity cycloneiv_hssi_rx_digis_ram16x14_syn
+# -- Compiling architecture trans of cycloneiv_hssi_rx_digis_ram16x14_syn
+# -- Compiling entity cycloneiv_hssi_rx_digis_ram20x16_syn
+# -- Compiling architecture trans of cycloneiv_hssi_rx_digis_ram20x16_syn
+# -- Compiling entity cycloneiv_hssi_rx_digis_rxclk_gating
+# -- Compiling architecture trans of cycloneiv_hssi_rx_digis_rxclk_gating
+# -- Compiling entity cycloneiv_hssi_rx_digi_rxclk_ctl
+# -- Compiling architecture trans of cycloneiv_hssi_rx_digi_rxclk_ctl
+# -- Compiling entity cycloneiv_hssi_rx_digi_auto_speed_neg
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_auto_speed_neg
+# -- Compiling entity cycloneiv_hssi_rx_digi_bist_ver
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_bist_ver
+# -- Compiling entity cycloneiv_hssi_rx_digi_cdr_ctrl
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_cdr_ctrl
+# -- Compiling entity cycloneiv_hssi_rx_digi_comp_chnl_top
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_comp_chnl_top
+# -- Compiling entity cycloneiv_hssi_rx_digi_rx_ctrl
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_rx_ctrl
+# -- Compiling entity cycloneiv_hssi_rx_digi_dec_chnl_top
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_dec_chnl_top
+# -- Compiling entity cycloneiv_hssi_rx_digi_dskw_fifo
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_dskw_fifo
+# -- Compiling entity cycloneiv_hssi_rx_digi_freqdet
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_freqdet
+# -- Compiling entity cycloneiv_hssi_rx_digi_eii_module
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_eii_module
+# -- Compiling entity cycloneiv_hssi_rx_digi_pcs_channel_testbus
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_pcs_channel_testbus
+# -- Compiling entity cycloneiv_hssi_rx_digi_iq_pipe_rx
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_iq_pipe_rx
+# -- Compiling entity cycloneiv_hssi_rx_digi_prbs_ver
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_prbs_ver
+# -- Compiling entity cycloneiv_hssi_rx_digi_wordalign
+# -- Compiling architecture RTL of cycloneiv_hssi_rx_digi_wordalign
+# -- Compiling entity cycloneiv_hssi_rx_digi
+# -- Compiling architecture trans of cycloneiv_hssi_rx_digi
+# -- Compiling entity cycloneiv_hssi_rx_pcs
+# -- Compiling architecture trans of cycloneiv_hssi_rx_pcs
+# -- Compiling entity cycloneiv_hssi_dskw_sm
+# -- Compiling architecture RTL of cycloneiv_hssi_dskw_sm
+# -- Compiling entity cycloneiv_hssi_tx_sm
+# -- Compiling architecture RTL of cycloneiv_hssi_tx_sm
+# -- Compiling entity cycloneiv_hssi_rcv_sm
+# -- Compiling architecture RTL of cycloneiv_hssi_rcv_sm
+# -- Compiling entity cycloneiv_hssi_cmu_quad_reset
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_quad_reset
+# -- Compiling entity cycloneiv_hssi_cmu_chnl_reset
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_chnl_reset
+# -- Compiling entity cycloneiv_hssi_cmu_auto_speed_neg
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_auto_speed_neg
+# -- Compiling entity cycloneiv_hssi_cmu_clk_gating
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_clk_gating
+# -- Compiling entity cycloneiv_hssi_cmu_clk_ctl
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_clk_ctl
+# -- Compiling entity cycloneiv_hssi_cmu_rx_ctrl
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_rx_ctrl
+# -- Compiling entity cycloneiv_hssi_cmu_rxclk_gating
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_rxclk_gating
+# -- Compiling entity cycloneiv_hssi_cmu_rxclk_ctl
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_rxclk_ctl
+# -- Compiling entity cycloneiv_hssi_cmu_tx_ctrl
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_tx_ctrl
+# -- Compiling entity cycloneiv_hssi_cmu_txclk_gating
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_txclk_gating
+# -- Compiling entity cycloneiv_hssi_cmu_txclk_ctl
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_txclk_ctl
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_bit
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_bit
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_bit_pma
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_bit_pma
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_16bit
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_16bit
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_16bit_pma
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_16bit_pma
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_reg_chnl
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_reg_chnl
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_chnl_bus_out_mux
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_chnl_bus_out_mux
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_chnl_top
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_chnl_top
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_status
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_status
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_addr
+# -- Compiling architecture RTL of cycloneiv_hssi_cmu_dprio_addr
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_cnt
+# -- Compiling architecture RTL of cycloneiv_hssi_cmu_dprio_cnt
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_ctl_data
+# -- Compiling architecture RTL of cycloneiv_hssi_cmu_dprio_ctl_data
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_sm
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_sm
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_reg_centrl
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_reg_centrl
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_centrl_bus_out_mux
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_centrl_bus_out_mux
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_centrl_top
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_centrl_top
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_map_index
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_map_index
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_map
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_map
+# -- Compiling entity cycloneiv_hssi_cmu_dprio_top
+# -- Compiling architecture trans of cycloneiv_hssi_cmu_dprio_top
+# -- Compiling entity cycloneiv_hssi_cmu
+# -- Compiling architecture trans of cycloneiv_hssi_cmu
+# -- Compiling entity cycloneiv_hssi_calibration_block
+# -- Compiling architecture sim_calib_arch of cycloneiv_hssi_calibration_block
+# End time: 21:30:32 on Dec 13,2018, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/cycloneiv_pcie_hip
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/cycloneiv_pcie_hip".
+# vmap cycloneiv_pcie_hip ./vhdl_libs/cycloneiv_pcie_hip
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap cycloneiv_pcie_hip ./vhdl_libs/cycloneiv_pcie_hip 
+# Modifying modelsim.ini
+# vcom -93 -work cycloneiv_pcie_hip {/softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_pcie_hip_components.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:31:15 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work cycloneiv_pcie_hip /softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_pcie_hip_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package CYCLONEIV_PCIE_HIP_COMPONENTS
+# -- Compiling package body CYCLONEIV_PCIE_HIP_COMPONENTS
+# -- Loading package CYCLONEIV_PCIE_HIP_COMPONENTS
+# End time: 21:31:16 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work cycloneiv_pcie_hip {/softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_pcie_hip_atoms.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:31:17 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work cycloneiv_pcie_hip /softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_pcie_hip_atoms.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package CYCLONEIV_PCIE_HIP_COMPONENTS
+# -- Compiling entity cycloneiv_pciehip_param
+# -- Compiling architecture trans of cycloneiv_pciehip_param
+# -- Compiling entity cycloneiv_pciehip_clkmux
+# -- Compiling architecture trans of cycloneiv_pciehip_clkmux
+# -- Compiling entity cycloneiv_pciehip_dprio_bit
+# -- Compiling architecture trans of cycloneiv_pciehip_dprio_bit
+# -- Compiling entity cycloneiv_pciehip_dprio_16bit
+# -- Compiling architecture trans of cycloneiv_pciehip_dprio_16bit
+# -- Loading package sgate_pack
+# -- Compiling entity cycloneiv_pciehip_dprio_addr
+# -- Compiling architecture RTL of cycloneiv_pciehip_dprio_addr
+# -- Compiling entity cycloneiv_pciehip_dprio_cnt
+# -- Compiling architecture RTL of cycloneiv_pciehip_dprio_cnt
+# -- Compiling entity cycloneiv_pciehip_dprio_ctl_data
+# -- Compiling architecture RTL of cycloneiv_pciehip_dprio_ctl_data
+# -- Compiling entity cycloneiv_pciehip_dprio_sm
+# -- Compiling architecture trans of cycloneiv_pciehip_dprio_sm
+# -- Compiling entity cycloneiv_pciehip_dprio_bus_out_mux
+# -- Compiling architecture trans of cycloneiv_pciehip_dprio_bus_out_mux
+# -- Compiling entity cycloneiv_pciehip_dprio_reg
+# -- Compiling architecture trans of cycloneiv_pciehip_dprio_reg
+# -- Compiling entity cycloneiv_pciehip_dprio_reg_top
+# -- Compiling architecture trans of cycloneiv_pciehip_dprio_reg_top
+# -- Compiling entity cycloneiv_pciehip_hip_dprio_top
+# -- Compiling architecture trans of cycloneiv_pciehip_hip_dprio_top
+# -- Compiling entity cycloneiv_pciehip_compute_bit
+# -- Compiling architecture trans of cycloneiv_pciehip_compute_bit
+# -- Compiling entity cycloneiv_pciehip_ecc_gen
+# -- Compiling architecture trans of cycloneiv_pciehip_ecc_gen
+# -- Compiling entity cycloneiv_pciehip_ecc_chk
+# -- Compiling architecture trans of cycloneiv_pciehip_ecc_chk
+# -- Compiling entity cycloneiv_pciehip_ecc_decoder
+# -- Compiling architecture trans of cycloneiv_pciehip_ecc_decoder
+# -- Compiling entity cycloneiv_pciehip_pulse_ext
+# -- Compiling architecture trans of cycloneiv_pciehip_pulse_ext
+# -- Compiling entity cycloneiv_pciehip_hip_mram
+# -- Compiling architecture trans of cycloneiv_pciehip_hip_mram
+# -- Compiling entity cycloneiv_pciehip_mram_top
+# -- Compiling architecture trans of cycloneiv_pciehip_mram_top
+# -- Compiling entity cycloneiv_pciehip_pciexp_dcfiforam
+# -- Compiling architecture trans of cycloneiv_pciehip_pciexp_dcfiforam
+# -- Compiling entity cycloneiv_pciehip_pciexp_dcram_rtry
+# -- Compiling architecture trans of cycloneiv_pciehip_pciexp_dcram_rtry
+# -- Compiling entity cycloneiv_pciehip_pciexp_dcram_rxvc
+# -- Compiling architecture trans of cycloneiv_pciehip_pciexp_dcram_rxvc
+# -- Compiling entity cycloneiv_pciehip_iei_detect
+# -- Compiling architecture RTL of cycloneiv_pciehip_iei_detect
+# -- Compiling entity cycloneiv_pciehip_pciexp_top_hip
+# -- Compiling architecture RTL of cycloneiv_pciehip_pciexp_top_hip
+# -- Compiling entity cycloneiv_pciehip_hip_top
+# -- Compiling architecture trans of cycloneiv_pciehip_hip_top
+# -- Compiling entity cycloneiv_hssi_pcie_hip
+# -- Compiling architecture trans of cycloneiv_hssi_pcie_hip
+# End time: 21:31:26 on Dec 13,2018, Elapsed time: 0:00:09
+# Errors: 0, Warnings: 0
+# 
+# vlib vhdl_libs/cycloneiv
+# ** Warning: (vlib-34) Library already exists at "vhdl_libs/cycloneiv".
+# vmap cycloneiv ./vhdl_libs/cycloneiv
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap cycloneiv ./vhdl_libs/cycloneiv 
+# Modifying modelsim.ini
+# vcom -93 -work cycloneiv {/softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_atoms.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:32:52 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work cycloneiv /softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_atoms.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Compiling package cycloneiv_atom_pack
+# -- Compiling package body cycloneiv_atom_pack
+# -- Loading package cycloneiv_atom_pack
+# -- Compiling package cycloneiv_pllpack
+# -- Compiling package body cycloneiv_pllpack
+# -- Loading package cycloneiv_pllpack
+# -- Loading package cycloneiv_atom_pack
+# -- Compiling entity cycloneiv_dffe
+# -- Compiling architecture behave of cycloneiv_dffe
+# -- Compiling entity cycloneiv_mux21
+# -- Compiling architecture AltVITAL of cycloneiv_mux21
+# -- Compiling entity cycloneiv_mux41
+# -- Compiling architecture AltVITAL of cycloneiv_mux41
+# -- Compiling entity cycloneiv_and1
+# -- Compiling architecture AltVITAL of cycloneiv_and1
+# -- Compiling entity cycloneiv_lcell_comb
+# -- Compiling architecture vital_lcell_comb of cycloneiv_lcell_comb
+# -- Compiling entity cycloneiv_routing_wire
+# ** Warning: /softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_atoms.vhd(1667): (vcom-1288) VITAL timing generic "tpd_datainglitch_dataout" port specification "datainglitch" does not denote a port.
+# (1076.4 section 4.3.2.1.3)
+# -- Compiling architecture behave of cycloneiv_routing_wire
+# -- Loading entity cycloneiv_and1
+# -- Compiling entity cycloneiv_ff
+# -- Compiling architecture vital_lcell_ff of cycloneiv_ff
+# -- Compiling entity cycloneiv_ram_register
+# -- Compiling architecture reg_arch of cycloneiv_ram_register
+# -- Compiling entity cycloneiv_ram_pulse_generator
+# -- Compiling architecture pgen_arch of cycloneiv_ram_pulse_generator
+# -- Loading entity cycloneiv_ram_register
+# -- Loading entity cycloneiv_ram_pulse_generator
+# -- Compiling entity cycloneiv_ram_block
+# -- Compiling architecture block_arch of cycloneiv_ram_block
+# -- Compiling entity cycloneiv_mac_data_reg
+# -- Compiling architecture vital_cycloneiv_mac_data_reg of cycloneiv_mac_data_reg
+# -- Compiling entity cycloneiv_mac_sign_reg
+# -- Compiling architecture cycloneiv_mac_sign_reg of cycloneiv_mac_sign_reg
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity cycloneiv_mac_mult_internal
+# -- Compiling architecture vital_cycloneiv_mac_mult_internal of cycloneiv_mac_mult_internal
+# -- Loading entity cycloneiv_mac_data_reg
+# -- Loading entity cycloneiv_mac_sign_reg
+# -- Loading entity cycloneiv_mac_mult_internal
+# -- Compiling entity cycloneiv_mac_mult
+# -- Compiling architecture vital_cycloneiv_mac_mult of cycloneiv_mac_mult
+# -- Compiling entity cycloneiv_mac_out
+# -- Compiling architecture vital_cycloneiv_mac_out of cycloneiv_mac_out
+# -- Compiling entity cycloneiv_io_ibuf
+# -- Compiling architecture arch of cycloneiv_io_ibuf
+# -- Compiling entity cycloneiv_io_obuf
+# -- Compiling architecture arch of cycloneiv_io_obuf
+# -- Compiling entity cycloneiv_ddio_oe
+# -- Compiling architecture arch of cycloneiv_ddio_oe
+# -- Compiling entity cycloneiv_latch
+# -- Compiling architecture vital_latch of cycloneiv_latch
+# -- Compiling entity cycloneiv_ddio_out
+# -- Compiling architecture arch of cycloneiv_ddio_out
+# -- Compiling entity cycloneiv_io_pad
+# -- Compiling architecture arch of cycloneiv_io_pad
+# -- Compiling entity cycloneiv_ena_reg
+# -- Compiling architecture behave of cycloneiv_ena_reg
+# -- Loading entity cycloneiv_ena_reg
+# -- Compiling entity cycloneiv_clkctrl
+# -- Compiling architecture vital_clkctrl of cycloneiv_clkctrl
+# -- Compiling entity cycloneiv_pseudo_diff_out
+# -- Compiling architecture arch of cycloneiv_pseudo_diff_out
+# -- Compiling entity cycloneiv_rublock
+# -- Compiling architecture architecture_rublock of cycloneiv_rublock
+# -- Compiling entity cycloneiv_termination
+# -- Compiling architecture cycloneiv_termination_arch of cycloneiv_termination
+# -- Compiling entity cycloneiv_jtag
+# -- Compiling architecture architecture_jtag of cycloneiv_jtag
+# -- Compiling entity cycloneiv_crcblock
+# -- Compiling architecture architecture_crcblock of cycloneiv_crcblock
+# -- Compiling entity cycloneiv_oscillator
+# -- Compiling architecture architecture_oscillator of cycloneiv_oscillator
+# -- Compiling entity cycloneiv_controller
+# -- Compiling architecture architecture_apfcontroller of cycloneiv_controller
+# -- Compiling entity cycloneiv_asmiblock
+# -- Compiling architecture behavior of cycloneiv_asmiblock
+# -- Compiling entity cycloneiv_mn_cntr
+# -- Compiling architecture behave of cycloneiv_mn_cntr
+# -- Compiling entity cycloneiv_post_divider
+# -- Compiling architecture behave of cycloneiv_post_divider
+# -- Compiling entity cycloneiv_scale_cntr
+# -- Compiling architecture behave of cycloneiv_scale_cntr
+# -- Compiling entity cycloneiv_pll_reg
+# -- Compiling architecture behave of cycloneiv_pll_reg
+# -- Loading package cycloneiv_pllpack
+# -- Loading entity cycloneiv_mn_cntr
+# -- Loading entity cycloneiv_scale_cntr
+# -- Loading entity cycloneiv_dffe
+# -- Loading entity cycloneiv_pll_reg
+# -- Compiling entity cycloneiv_pll
+# -- Compiling architecture vital_pll of cycloneiv_pll
+# End time: 21:32:53 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# vcom -93 -work cycloneiv {/softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_components.vhd}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:33:22 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work cycloneiv /softslin/altera14_0/quartus/eda/sim_lib/cycloneiv_components.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package cycloneiv_atom_pack
+# -- Compiling package cycloneiv_components
+# End time: 21:33:23 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim SE-64 vmap 10.5c Lib Mapping Utility 2016.07 Jul 20 2016
+# vmap work gate_work 
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {barycentre_6_1200mv_85c_slow.vho}
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:33:25 on Dec 13,2018
+# vcom -reportprogress 300 -93 -work work barycentre_6_1200mv_85c_slow.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Compiling entity barycentre
+# -- Compiling architecture structure of barycentre
+# End time: 21:33:26 on Dec 13,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/Simu_barycentre/simulation/modelsim/barycentre.vht
+# Model Technology ModelSim SE-64 vcom 10.5c Compiler 2016.07 Jul 20 2016
+# Start time: 21:34:31 on Dec 13,2018
+# vcom -reportprogress 300 -work work /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/Simu_barycentre/simulation/modelsim/barycentre.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity barycentre_vhd_tst
+# -- Compiling architecture barycentre_arch of barycentre_vhd_tst
+# End time: 21:34:31 on Dec 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -voptargs=+acc gate_work.barycentre_vhd_tst
+# vsim -voptargs="+acc" gate_work.barycentre_vhd_tst 
+# Start time: 21:34:43 on Dec 13,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.barycentre_vhd_tst(barycentre_arch)#1
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.barycentre(structure)#1
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)#1
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)#1
+# Loading cycloneiv.cycloneiv_clkctrl(vital_clkctrl)#1
+# Loading cycloneiv.cycloneiv_ena_reg(behave)#1
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)#1
+# Loading altera.dffeas(vital_dffeas)#1
+add wave -position insertpoint  \
+sim:/barycentre_vhd_tst/i1/IMG \
+sim:/barycentre_vhd_tst/i1/reset \
+sim:/barycentre_vhd_tst/i1/VGA_CLK \
+sim:/barycentre_vhd_tst/i1/X_Cont \
+sim:/barycentre_vhd_tst/i1/Y_Cont \
+sim:/barycentre_vhd_tst/i1/r_bary \
+sim:/barycentre_vhd_tst/i1/g_bary \
+sim:/barycentre_vhd_tst/i1/b_bary \
+sim:/barycentre_vhd_tst/i1/r_bary_out \
+sim:/barycentre_vhd_tst/i1/g_bary_out \
+sim:/barycentre_vhd_tst/i1/b_bary_out \
+sim:/barycentre_vhd_tst/i1/X \
+sim:/barycentre_vhd_tst/i1/Y
+add wave -position insertpoint  \
+sim:/barycentre_vhd_tst/i1/gi \
+sim:/barycentre_vhd_tst/i1/n_x \
+sim:/barycentre_vhd_tst/i1/sum_Hpx \
+sim:/barycentre_vhd_tst/i1/sum_Vpx \
+sim:/barycentre_vhd_tst/i1/x_int \
+sim:/barycentre_vhd_tst/i1/y_int \
+sim:/barycentre_vhd_tst/i1/ri \
+sim:/barycentre_vhd_tst/i1/n_y
+run
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 20460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 40940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 61420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 81900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 102380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 122860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 143340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 163820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 184300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 204780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 225260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 245740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 266220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 286700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 307180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 327660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 348140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 368620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 389100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 409580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 430060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 450540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 471020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 491500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 511980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 532460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 552940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 573420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 593900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 614380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 634860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 655340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 675820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 696300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 716780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 737260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 757740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 778220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 798700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 819180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 839660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 860140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 880620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 901100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 921580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 942060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 962540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 983020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1003500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1023980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1044460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1064940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1085420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1105900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1126380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1146860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1167340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1187820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1208300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1228780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1249260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1269740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1290220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1310700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1331180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1351660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1372140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1392620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1413100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1433580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1454060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1474540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1495020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1515500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1535980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1556460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1576940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1597420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1617900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1638380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1658860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1679340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1699820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1720300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1740780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1761260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1781740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1802220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1822700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1843180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1863660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1884140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1904620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1925100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1945580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1966060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 1986540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2007020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2027500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2047980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2068460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2088940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2109420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2129900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2150380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2170860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2191340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2211820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2232300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2252780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2273260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2293740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2314220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2334700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2355180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2375660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2396140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2416620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2437100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2457580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2478060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2498540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2519020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2539500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2559980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2580460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2600940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2621420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2641900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2662380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2682860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2703340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2723820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2744300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2764780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2785260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2805740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2826220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2846700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2867180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2887660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2908140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2928620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2949100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2969580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 2990060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3010540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3031020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3051500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3071980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3092460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3112940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3133420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3153900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3174380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3194860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3215340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3235820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3256300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3276780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3297260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3317740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3338220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3358700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3379180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3399660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3420140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3440620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3461100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3481580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3502060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3522540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3543020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3563500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3583980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3604460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3624940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3645420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3665900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3686380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3706860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3727340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3747820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3768300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3788780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3809260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3829740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3850220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3870700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3891180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3911660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3932140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3952620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3973100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 3993580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4014060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4034540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4055020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4075500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4095980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4116460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4136940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4157420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4177900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4198380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4218860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4239340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4259820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4280300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4300780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4321260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4341740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4362220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4382700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4403180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4423660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4444140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4464620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4485100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4505580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4526060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4546540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4567020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4587500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4607980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4628460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4648940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4669420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4689900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4710380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4730860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4751340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4771820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4792300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4812780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4833260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4853740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4874220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4894700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4915180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4935660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4956140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4976620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 4997100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5017580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5038060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5058540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5079020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5099500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5119980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5140460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5160940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5181420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5201900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5222380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5242860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5263340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5283820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5304300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5324780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5345260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5365740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5386220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5406700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5427180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5447660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5468140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5488620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5509100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5529580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5550060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5570540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5591020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5611500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5631980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5652460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5672940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5693420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5713900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5734380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5754860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5775340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5795820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5816300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5836780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5857260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5877740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5898220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5918700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5939180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5959660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 5980140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6000620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6021100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6041580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6062060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6082540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6103020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6123500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6143980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6164460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6184940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6205420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6225900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6246380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6266860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6287340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6307820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6328300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6348780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6369260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6389740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6410220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6430700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6451180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6471660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6492140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6512620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6533100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6553580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6574060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6594540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6615020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6635500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6655980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6676460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6696940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6717420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6737900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6758380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6778860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6799340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6819820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6840300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6860780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6881260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6901740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6922220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6942700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6963180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 6983660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7004140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7024620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7045100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7065580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7086060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7106540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7127020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7147500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7167980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7188460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7208940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7229420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7249900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7270380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7290860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7311340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7331820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7352300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7372780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7393260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7413740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7434220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7454700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7475180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7495660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7516140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7536620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7557100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7577580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7598060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7618540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7639020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7659500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7679980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7700460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7720940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7741420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7761900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7782380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7802860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7823340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7843820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7864300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7884780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7905260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7925740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7946220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7966700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 7987180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8007660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8028140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8048620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8069100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8089580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8110060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8130540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8151020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8171500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8191980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8212460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8232940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8253420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8273900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8294380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8314860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8335340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8355820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8376300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8396780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8417260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8437740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8458220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8478700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8499180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8519660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8540140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8560620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8581100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8601580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8622060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8642540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8663020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8683500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8703980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8724460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8744940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8765420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8785900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8806380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8826860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8847340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8867820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8888300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8908780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8929260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8949740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8970220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 8990700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9011180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9031660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9052140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9072620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9093100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9113580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9134060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9154540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9175020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9195500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9215980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9236460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9256940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9277420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9297900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9318380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9338860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9359340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9379820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9400300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9420780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9441260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9461740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9482220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9502700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9523180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9543660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9564140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9584620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9605100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9625580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9646060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9666540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9687020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9707500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9727980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9748460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9768940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9789420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9809900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9830420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9850900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9871380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9891860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9912340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9932820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9953300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9973780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 9994260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10014740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10035220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10055700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10076180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10096660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10117140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10137620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10158100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10178580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10199060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10219540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10240020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10260500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10280980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10301460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10321940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10342420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10362900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10383380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10403860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10424340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10444820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10465300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10485780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10506260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10526740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10547220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10567700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10588180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10608660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10629140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10649620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10670100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10690580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10711060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10731540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10752020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10772500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10792980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10813460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10833940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10854420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10874900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10895380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10915860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10936340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10956820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10977300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 10997780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11018260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11038740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11059220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11079700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11100180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11120660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11141140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11161620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11182100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11202580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11223060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11243540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11264020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11284500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11304980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11325460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11345940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11366420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11386900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11407380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11427860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11448340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11468820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11489300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11509780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11530260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11550740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11571220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11591700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11612180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11632660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11653140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11673620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11694100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11714580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11735060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11755540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11776020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11796500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11816980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11837460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11857940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11878420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11898900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11919380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11939860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11960340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 11980820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12001300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12021780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12042260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12062740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12083220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12103700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12124180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12144660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12165140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12185620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12206100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12226580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12247060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12267540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12288020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12308500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12328980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12349460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12369940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12390420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12410900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12431380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12451860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12472340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12492820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12513300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12533780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12554260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12574740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12595220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12615700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12636180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12656660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12677140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12697620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12718100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12738580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12759060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12779540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12800020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12820500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12840980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12861460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12881940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12902420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12922900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12943380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12963860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 12984340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13004820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13025300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13045780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13066260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13086740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13107220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13127700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13148180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13168660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13189140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13209620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13230100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13250580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13271060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13291540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13312020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13332500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13352980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13373460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13393940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13414420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13434900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13455380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13475860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13496340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13516820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13537300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13557780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13578260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13598740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13619220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13639700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13660180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13680660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13701140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13721620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13742100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13762580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13783060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13803540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13824020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13844500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13864980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13885460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13905940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13926420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13946900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13967380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 13987860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14008340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14028820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14049300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14069780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14090260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14110740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14131220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14151700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14172180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14192660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14213140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14233620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14254100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14274580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14295060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14315540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14336020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14356500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14376980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14397460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14417940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14438420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14458900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14479380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14499860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14520340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14540820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14561300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14581780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14602260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14622740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14643220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14663700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14684180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14704660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14725140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14745620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14766100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14786580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14807060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14827540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14848020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14868500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14888980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14909460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14929940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14950420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14970900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 14991380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15011860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15032340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15052820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15073300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15093780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15114260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15134740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15155220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15175700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15196180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15216660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15237140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15257620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15278100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15298580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15319060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15339540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15360020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15380500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15400980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15421460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15441940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15462420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15482900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15503380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15523860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15544340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15564820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15585300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15605780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15626260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15646740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15667220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15687700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15708180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15728660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15749140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15769620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15790100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15810580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15831060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15851540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15872020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15892500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15912980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15933460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15953940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15974420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 15994900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16015380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16035860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16056340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16076820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16097300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16117780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16138260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16158740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16179220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16199700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16220180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16240660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16261140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16281620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16302100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16322580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16343060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16363540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16384020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16404500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16424980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16445460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16465940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16486420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16506900 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16527380 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16547860 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16568340 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16588820 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16609300 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16629780 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16650260 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16670740 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16691220 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16711700 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16732180 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16752660 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16773140 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16793620 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16814100 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16834580 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16855060 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16875540 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16896020 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16916500 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16936980 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16957460 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16977940 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 16998420 ns  Iteration: 0  Instance: /barycentre_vhd_tst
+# End time: 22:36:26 on Dec 13,2018, Elapsed time: 1:01:43
+# Errors: 0, Warnings: 830

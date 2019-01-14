@@ -1,0 +1,151 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+library Lib;
+use Lib.all;
+
+
+entity top_bar is
+
+	port 
+	(
+		CLK_top			: in std_logic;
+		reset_top    		: in std_logic;
+		SW1_top    		: in std_logic;		
+		r_top	   		: in std_logic_vector(7 downto 0);
+		g_top	   		: in std_logic_vector(7 downto 0);
+		b_top	   		: in std_logic_vector(7 downto 0);
+		rout_top	   	: out std_logic_vector(7 downto 0);
+		gout_top	   	: out std_logic_vector(7 downto 0);
+		bout_top		: out std_logic_vector(7 downto 0);
+		r_out_proc	   	: out std_logic_vector(7 downto 0);
+		g_out_proc	   	: out std_logic_vector(7 downto 0);
+		b_out_proc		: out std_logic_vector(7 downto 0);
+		X_barycentre_top	: out std_logic_vector (8 downto 0);
+		Y_barycentre_top	: out std_logic_vector (8 downto 0);
+		HSYNC_top		: out std_logic;
+		VSYNC_top		: out std_logic;
+		cam_x			: out std_logic_vector (9 downto 0);
+		cam_y			: out std_logic_vector (8 downto 0);
+		IMG_top			: out std_logic
+	); 
+
+end entity top_bar;
+
+architecture bar of top_bar is
+
+	component gensync is
+	    Port ( CLK : in std_logic;
+		   reset : in std_logic;
+		   HSYNC : out std_logic;
+		   VSYNC : out std_logic;
+		   IMG : out std_logic;
+		   IMGY_out : out std_logic;
+		   X : out std_logic_vector(9 downto 0);
+		   Y : out std_logic_vector(8 downto 0)
+		   );
+	end component;
+
+	component image_process is
+	port 
+	(
+		IMG	   : in std_logic;
+		reset    : in std_logic;
+		SW1    : in std_logic;		
+		VGA_HS	   : in std_logic;
+		VGA_VS	   : in std_logic;
+		VGA_CLK	   : in std_logic;
+		X_Cont   : in std_logic_vector(8 downto 0);
+		Y_Cont   : in std_logic_vector(8 downto 0);  -- image 512 x 512
+		r	   : in std_logic_vector(7 downto 0);
+		g	   : in std_logic_vector(7 downto 0);
+		b	   : in std_logic_vector(7 downto 0);
+		r_out	: out std_logic_vector(7 downto 0);
+		g_out	: out std_logic_vector(7 downto 0);
+		b_out	: out std_logic_vector(7 downto 0)
+	);
+	end component;
+
+	component barycentre
+	port (
+		reset    		: in std_logic;
+		IMG	   		: in std_logic;
+		VGA_CLK	   		: in std_logic;
+		VGA_VS	   		: in std_logic;
+		X_Cont  		: in std_logic_vector(8 downto 0);
+		Y_Cont  		: in std_logic_vector(8 downto 0);  -- image 512 x 512
+		r_bary	  		: in std_logic_vector(7 downto 0);
+		g_bary	 		: in std_logic_vector(7 downto 0);
+		b_bary	 		: in std_logic_vector(7 downto 0);
+		r_bary_out	  	: out std_logic_vector(7 downto 0);
+		g_bary_out	 	: out std_logic_vector(7 downto 0);
+		b_bary_out	 	: out std_logic_vector(7 downto 0);
+		X_barycentre 	: out std_logic_vector (8 downto 0);
+		Y_barycentre 	: out std_logic_vector (8 downto 0)
+	);
+	end component;
+
+	signal HSYNC_int, VSYNC_int 	: std_logic;
+	signal IMG_int			: std_logic;
+	signal X_int			: std_logic_vector (9 downto 0);
+	signal Y_int			: std_logic_vector (8 downto 0);
+	signal r_int, g_int, b_int	: std_logic_vector (7 downto 0);
+
+	begin
+		gensync1 : gensync port map (
+			CLK => CLK_top,
+			reset => reset_top,
+			HSYNC => HSYNC_int,
+			VSYNC => VSYNC_int,
+			IMG => IMG_int,
+			X => X_int,
+			Y => Y_int
+			);
+
+		U1 : image_process port map (
+			IMG => IMG_int,
+			reset => reset_top,
+			SW1 => SW1_top,
+			VGA_HS => HSYNC_int,   
+			VGA_VS => VSYNC_int,
+			VGA_CLK => CLK_top,	   
+			X_Cont => X_int(8 downto 0),
+			Y_Cont => Y_int,
+			r => r_top,
+			g => g_top,
+			b => b_top,
+			r_out => r_int,
+			g_out => g_int,
+			b_out => b_int
+			);
+
+		pos_bary : barycentre port map (
+			reset =>  reset_top,		
+			IMG => IMG_int,
+			VGA_CLK => CLK_top,
+			VGA_VS=>VSYNC_int,
+			X_Cont => X_int(8 downto 0),
+			Y_Cont => Y_int,
+			r_bary => r_int,
+			g_bary => g_int,
+			b_bary => b_int,
+			r_bary_out => rout_top,
+			g_bary_out => gout_top,
+			b_bary_out => bout_top,
+			X_barycentre => X_barycentre_top,
+			Y_barycentre => Y_barycentre_top
+			);
+
+HSYNC_top<=HSYNC_int;
+VSYNC_top<=VSYNC_int;
+cam_x <= '0' & X_int(8 downto 0);
+cam_y <= Y_int;
+r_out_proc <= r_int;
+g_out_proc <= g_int;
+b_out_proc <= b_int;
+IMG_top <= IMG_int;
+
+end bar;

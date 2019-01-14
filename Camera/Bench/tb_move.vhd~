@@ -1,0 +1,42 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+use IEEE.math_real.all;
+--use IEEE.std_logic_arith.all;
+
+library drone_lib;
+use drone_lib.all;
+
+entity bench is
+end bench;
+
+architecture test_decde of bench is
+
+  component decode
+    Port ( clk : in STD_LOGIC;
+	   S  : in STD_LOGIC_VECTOR (3 downto 0);
+            A  : out STD_LOGIC
+           ); 
+    end component;
+  
+signal sig_clk : std_logic := '1';
+
+
+  signal a_int : std_logic_vector(3 downto 0);
+  --signal img_int : std_logic := '1';
+  signal A: std_logic;
+ 
+begin 
+  U1 : decode port map  (sig_clk,a_int,A);
+
+		
+		sig_clk <= not sig_clk after 5 ns;	
+	process	
+	begin
+
+		a_int<="1001" ;
+
+		wait for 10 ns;
+	end process;
+	
+end test_move;	

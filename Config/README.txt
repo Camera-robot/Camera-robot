@@ -1,0 +1,14 @@
++---------------------------+
+|			    |
+|    Projet Camera_robot    |
+|		|_Config    |
+|		|_ ...	    |
++---------------------------+
+
+Dans ce dossier se trouve les configurations à sourcer
+
+################ModelSim################
+$source settings_modsim10_5c.sh
+	
+################Quartus#################
+$source settings_quartus140.sh

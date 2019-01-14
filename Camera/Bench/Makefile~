@@ -1,0 +1,21 @@
+ifdef gui
+  mode = -gui
+endif
+
+src_files = tb_barycentre.vhd \
+            tbench_top.sv
+
+
+compil:
+	vmap ../Lib
+	vcom -93 -work ../Lib ../Bench/tb_barycentre.vhd
+	vlog -sv -work ../Lib ../Bench/tbench_top.sv
+
+simu_top:
+	vsim -do script.tcl
+
+clean_mm:
+	-rm -rf ../Lib vsim.wlf transcript
+
+clean:
+	-rm -rf *bmp irun* waves* INCA* *diag

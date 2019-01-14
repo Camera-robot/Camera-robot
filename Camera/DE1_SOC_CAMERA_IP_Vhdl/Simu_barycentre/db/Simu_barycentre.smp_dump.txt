@@ -1,0 +1,8 @@
+
+State Machine - |barycentre|state
+Name state.calcul_barycentre state.ligne state.colonne state.new_img state.init 
+state.init 0 0 0 0 0 
+state.new_img 0 0 0 1 1 
+state.colonne 0 0 1 0 1 
+state.ligne 0 1 0 0 1 
+state.calcul_barycentre 1 0 0 0 1 

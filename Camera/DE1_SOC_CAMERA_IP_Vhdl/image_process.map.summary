@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Fri Jun  5 11:55:51 2015
+Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Full Version
+Revision Name : image_process
+Top-level Entity Name : image_process
+Family : Cyclone IV GX
+Total logic elements : 67
+    Total combinational functions : 66
+    Dedicated logic registers : 49
+Total registers : 49
+Total pins : 71
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

@@ -1,0 +1,8 @@
+
+State Machine - |PWM_cycle|etat
+Name etat.new_t1 etat.new_t0 etat.pwm_low_s etat.pwm_high_s etat.pwm_init_high_s 
+etat.pwm_init_high_s 0 0 0 0 0 
+etat.pwm_high_s 0 0 0 1 1 
+etat.pwm_low_s 0 0 1 0 1 
+etat.new_t0 0 1 0 0 1 
+etat.new_t1 1 0 0 0 1 

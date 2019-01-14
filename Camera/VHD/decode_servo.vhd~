@@ -1,0 +1,27 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+
+entity decode is
+    Port ( clk : in STD_LOGIC;
+	   S  : in STD_LOGIC_VECTOR (3 downto 0);
+            A  : out STD_LOGIC
+           );                   
+end decode;
+
+architecture A_decode of decode is
+signal r : std_logic;
+begin
+
+
+ process (clk,S)
+	 begin
+
+	for i in 0 to 3 loop		
+		r <= S(i);
+	end loop;
+ 
+end process;
+
+ A<=r;
+end  A_decode;

@@ -1,0 +1,9 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/barycentre.vhd}
+
