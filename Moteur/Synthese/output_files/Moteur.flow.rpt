@@ -1,5 +1,5 @@
 Flow report for Moteur
-Mon Jan 14 12:28:00 2019
+Tue Jan 15 16:40:49 2019
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Jan 14 12:28:00 2019       ;
+; Flow Status                     ; Successful - Tue Jan 15 16:40:49 2019       ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                   ; Moteur                                      ;
 ; Top-level Entity Name           ; top_72_to_serial                            ;
@@ -49,8 +49,8 @@ agreement for further details.
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 105                                         ;
-; Total pins                      ; 16                                          ;
+; Total registers                 ; 114                                         ;
+; Total pins                      ; 18                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 01/14/2019 12:27:55 ;
+; Start date & time ; 01/15/2019 16:40:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Moteur              ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+------------------+----------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name      ; Section Id     ;
 +-------------------------------------+---------------------------------------+---------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 144339962616.154746527519929          ; --            ; --               ; --             ;
+; COMPILER_SIGNATURE_ID               ; 144339962616.154756684532018          ; --            ; --               ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --               ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --               ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --               ; --             ;
@@ -99,8 +99,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:04     ; 1.0                     ; 814 MB              ; 00:00:04                           ;
-; Total                ; 00:00:04     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis ; 00:00:05     ; 1.0                     ; 814 MB              ; 00:00:04                           ;
+; Total                ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

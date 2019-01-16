@@ -22,6 +22,7 @@ entity mode_switch is
 port(	x	:	in	STD_LOGIC_VECTOR(9 downto 0);	--,y
 	h	:	in	STD_LOGIC;		--,v
 	mode	:	in	STD_LOGIC;
+	v	:	in	STD_LOGIC;
 	active_rot : out	STD_LOGIC;
 	oh	:	out	STD_LOGIC_VECTOR(15 downto 0));		--,ov
 end mode_switch;
@@ -31,7 +32,7 @@ architecture MS of mode_switch is
 	--signal nxt_oh	: STD_LOGIC_VECTOR(15 downto 0)) := "0000100000000000";
 
 begin
-process(mode, h, x)
+process(mode, h, v, x)
 begin
 
 	if (mode = '0') then		--mode de fonctionnement qui prend les entrées du cpu
@@ -48,8 +49,15 @@ begin
 			
 			
 			active_rot<='1';
+			if (v = '0') then
+
 			--oh <= "0000000100000001";--test ex16
-			oh <= "0000000000001000";--180°
+				oh <= "0000000000001000";--180° 0x00 0x08
+
+			else
+				oh <= "0101001100000101"; --120°
+				--oh <= "0000000000000100";
+			end if;
 			--active_rot<='1';
 			--oh <= "0000010101010011"; --bras horizontal à 120°
 			

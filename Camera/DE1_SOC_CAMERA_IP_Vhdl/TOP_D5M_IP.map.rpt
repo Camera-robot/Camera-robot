@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TOP_D5M_IP
-Thu Jan 10 17:47:30 2019
+Tue Jan 15 15:11:52 2019
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -77,7 +77,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jan 10 17:47:29 2019       ;
+; Analysis & Synthesis Status     ; Successful - Tue Jan 15 15:11:52 2019       ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Full Version ;
 ; Revision Name                   ; TOP_D5M_IP                                  ;
 ; Top-level Entity Name           ; TOP_D5M_IP                                  ;
@@ -202,89 +202,89 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
-; barycentre.vhd                   ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/barycentre.vhd                      ;         ;
-; V/D5M_IP.v                       ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/V/D5M_IP.v                          ;         ;
-; TOP_D5M_IP.vhd                   ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/TOP_D5M_IP.vhd                      ;         ;
-; gensync.vhd                      ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/gensync.vhd                         ;         ;
-; altpll0.vhd                      ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/altpll0.vhd                         ;         ;
-; V/Reset_Delay.v                  ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/V/Reset_Delay.v                     ;         ;
-; V/RAW2RGB.v                      ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/V/RAW2RGB.v                         ;         ;
-; V/Line_Buffer.v                  ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/V/Line_Buffer.v                     ;         ;
-; V/I2C_Controller.v               ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/V/I2C_Controller.v                  ;         ;
-; V/I2C_CCD_Config.v               ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/V/I2C_CCD_Config.v                  ;         ;
-; V/CCD_Capture.v                  ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/V/CCD_Capture.v                     ;         ;
-; dpram_512x512.vhd                ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/dpram_512x512.vhd                   ;         ;
-; image_process.vhd                ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/image_process.vhd                   ;         ;
-; altshift_taps.tdf                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altshift_taps.tdf            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altdpram.inc                 ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_counter.inc              ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_compare.inc              ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_constant.inc             ;         ;
-; db/shift_taps_kvt.tdf            ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/shift_taps_kvt.tdf               ;         ;
-; db/altsyncram_e1f1.tdf           ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/altsyncram_e1f1.tdf              ;         ;
-; db/cntr_7of.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_7of.tdf                     ;         ;
-; db/cmpr_qac.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cmpr_qac.tdf                     ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altsyncram.tdf               ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/stratix_ram_block.inc        ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_mux.inc                  ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_decode.inc               ;         ;
-; aglobal140.inc                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/aglobal140.inc               ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/a_rdenreg.inc                ;         ;
-; altrom.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altrom.inc                   ;         ;
-; altram.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altram.inc                   ;         ;
-; db/altsyncram_c2q1.tdf           ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/altsyncram_c2q1.tdf              ;         ;
-; db/decode_sma.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/decode_sma.tdf                   ;         ;
-; db/decode_l2a.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/decode_l2a.tdf                   ;         ;
-; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/mux_chb.tdf                      ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altpll.tdf                   ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/stratix_pll.inc              ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/stratixii_pll.inc            ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/cycloneii_pll.inc            ;         ;
-; db/altpll0_altpll.v              ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/altpll0_altpll.v                 ;         ;
-; pwm_cycle.vhd                    ; yes             ; Auto-Found VHDL File         ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/pwm_cycle.vhd                       ;         ;
-; sld_signaltap.vhd                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_signaltap.vhd            ;         ;
-; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd       ;         ;
-; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_ela_control.vhd          ;         ;
-; lpm_shiftreg.tdf                 ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_shiftreg.tdf             ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/dffeea.inc                   ;         ;
-; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_mbpmg.vhd                ;         ;
-; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd ;         ;
-; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_buffer_manager.vhd       ;         ;
-; db/altsyncram_2584.tdf           ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/altsyncram_2584.tdf              ;         ;
-; db/decode_tma.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/decode_tma.tdf                   ;         ;
-; db/mux_dhb.tdf                   ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/mux_dhb.tdf                      ;         ;
-; altdpram.tdf                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altdpram.tdf                 ;         ;
-; memmodes.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/others/maxplus2/memmodes.inc               ;         ;
-; a_hdffe.inc                      ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/a_hdffe.inc                  ;         ;
-; alt_le_rden_reg.inc              ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/alt_le_rden_reg.inc          ;         ;
-; altsyncram.inc                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altsyncram.inc               ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_mux.tdf                  ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/muxlut.inc                   ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/bypassff.inc                 ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altshift.inc                 ;         ;
-; db/mux_glc.tdf                   ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/mux_glc.tdf                      ;         ;
-; lpm_decode.tdf                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_decode.tdf               ;         ;
-; declut.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/declut.inc                   ;         ;
-; db/decode_vnf.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/decode_vnf.tdf                   ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_counter.tdf              ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_add_sub.inc              ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/cmpconst.inc                 ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/alt_counter_stratix.inc      ;         ;
-; db/cntr_h7i.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_h7i.tdf                     ;         ;
-; db/cntr_85j.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_85j.tdf                     ;         ;
-; db/cntr_79i.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_79i.tdf                     ;         ;
-; db/cmpr_e9c.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cmpr_e9c.tdf                     ;         ;
-; db/cntr_kri.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_kri.tdf                     ;         ;
-; db/cmpr_99c.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/DE1_SOC_CAMERA_IP_Vhdl/db/cmpr_99c.tdf                     ;         ;
-; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_rom_sr.vhd               ;         ;
-; sld_hub.vhd                      ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_hub.vhd                  ;         ;
-; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_jtag_hub.vhd             ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; barycentre.vhd                   ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/barycentre.vhd         ;         ;
+; V/D5M_IP.v                       ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/V/D5M_IP.v             ;         ;
+; TOP_D5M_IP.vhd                   ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/TOP_D5M_IP.vhd         ;         ;
+; gensync.vhd                      ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/gensync.vhd            ;         ;
+; altpll0.vhd                      ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/altpll0.vhd            ;         ;
+; V/Reset_Delay.v                  ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/V/Reset_Delay.v        ;         ;
+; V/RAW2RGB.v                      ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/V/RAW2RGB.v            ;         ;
+; V/Line_Buffer.v                  ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/V/Line_Buffer.v        ;         ;
+; V/I2C_Controller.v               ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/V/I2C_Controller.v     ;         ;
+; V/I2C_CCD_Config.v               ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/V/I2C_CCD_Config.v     ;         ;
+; V/CCD_Capture.v                  ; yes             ; User Verilog HDL File        ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/V/CCD_Capture.v        ;         ;
+; dpram_512x512.vhd                ; yes             ; User Wizard-Generated File   ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/dpram_512x512.vhd      ;         ;
+; image_process.vhd                ; yes             ; User VHDL File               ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/image_process.vhd      ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altshift_taps.tdf                   ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altdpram.inc                        ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_counter.inc                     ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_compare.inc                     ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_constant.inc                    ;         ;
+; db/shift_taps_kvt.tdf            ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/shift_taps_kvt.tdf  ;         ;
+; db/altsyncram_e1f1.tdf           ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/altsyncram_e1f1.tdf ;         ;
+; db/cntr_7of.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_7of.tdf        ;         ;
+; db/cmpr_qac.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cmpr_qac.tdf        ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altsyncram.tdf                      ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/stratix_ram_block.inc               ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_mux.inc                         ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_decode.inc                      ;         ;
+; aglobal140.inc                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/aglobal140.inc                      ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/a_rdenreg.inc                       ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altrom.inc                          ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altram.inc                          ;         ;
+; db/altsyncram_c2q1.tdf           ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/altsyncram_c2q1.tdf ;         ;
+; db/decode_sma.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/decode_sma.tdf      ;         ;
+; db/decode_l2a.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/decode_l2a.tdf      ;         ;
+; db/mux_chb.tdf                   ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/mux_chb.tdf         ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altpll.tdf                          ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/stratix_pll.inc                     ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/stratixii_pll.inc                   ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/cycloneii_pll.inc                   ;         ;
+; db/altpll0_altpll.v              ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/altpll0_altpll.v    ;         ;
+; pwm_cycle.vhd                    ; yes             ; Auto-Found VHDL File         ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/pwm_cycle.vhd          ;         ;
+; sld_signaltap.vhd                ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_signaltap.vhd                   ;         ;
+; sld_signaltap_impl.vhd           ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_signaltap_impl.vhd              ;         ;
+; sld_ela_control.vhd              ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_ela_control.vhd                 ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_shiftreg.tdf                    ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/dffeea.inc                          ;         ;
+; sld_mbpmg.vhd                    ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_mbpmg.vhd                       ;         ;
+; sld_ela_trigger_flow_mgr.vhd     ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_ela_trigger_flow_mgr.vhd        ;         ;
+; sld_buffer_manager.vhd           ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_buffer_manager.vhd              ;         ;
+; db/altsyncram_2584.tdf           ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/altsyncram_2584.tdf ;         ;
+; db/decode_tma.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/decode_tma.tdf      ;         ;
+; db/mux_dhb.tdf                   ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/mux_dhb.tdf         ;         ;
+; altdpram.tdf                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altdpram.tdf                        ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/others/maxplus2/memmodes.inc                      ;         ;
+; a_hdffe.inc                      ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/a_hdffe.inc                         ;         ;
+; alt_le_rden_reg.inc              ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/alt_le_rden_reg.inc                 ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altsyncram.inc                      ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_mux.tdf                         ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/muxlut.inc                          ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/bypassff.inc                        ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/altshift.inc                        ;         ;
+; db/mux_glc.tdf                   ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/mux_glc.tdf         ;         ;
+; lpm_decode.tdf                   ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_decode.tdf                      ;         ;
+; declut.inc                       ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/declut.inc                          ;         ;
+; db/decode_vnf.tdf                ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/decode_vnf.tdf      ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_counter.tdf                     ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/lpm_add_sub.inc                     ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/cmpconst.inc                        ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; /softslin/altera14_0/quartus/libraries/megafunctions/alt_counter_stratix.inc             ;         ;
+; db/cntr_h7i.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_h7i.tdf        ;         ;
+; db/cntr_85j.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_85j.tdf        ;         ;
+; db/cntr_79i.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_79i.tdf        ;         ;
+; db/cmpr_e9c.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cmpr_e9c.tdf        ;         ;
+; db/cntr_kri.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cntr_kri.tdf        ;         ;
+; db/cmpr_99c.tdf                  ; yes             ; Auto-Generated Megafunction  ; /tp/xph3app/xph3app602/Camera-robot/Camera/DE1_SOC_CAMERA_IP_Vhdl/db/cmpr_99c.tdf        ;         ;
+; sld_rom_sr.vhd                   ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_rom_sr.vhd                      ;         ;
+; sld_hub.vhd                      ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_hub.vhd                         ;         ;
+; sld_jtag_hub.vhd                 ; yes             ; Encrypted Megafunction       ; /softslin/altera14_0/quartus/libraries/megafunctions/sld_jtag_hub.vhd                    ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------+
@@ -1492,7 +1492,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:09     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -1560,7 +1560,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Thu Jan 10 17:47:04 2019
+    Info: Processing started: Tue Jan 15 15:11:30 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TOP_D5M_IP -c TOP_D5M_IP
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file barycentre.vhd
@@ -1606,6 +1606,8 @@ Info (12021): Found 2 design units, including 1 entities, in source file dpram_5
 Info (12021): Found 2 design units, including 1 entities, in source file image_process.vhd
     Info (12022): Found design unit 1: image_process-rtl
     Info (12023): Found entity 1: image_process
+Info (12021): Found 1 design units, including 1 entities, in source file Camera.bdf
+    Info (12023): Found entity 1: Camera
 Warning (10236): Verilog HDL Implicit Net warning at D5M_IP.v(186): created implicit net for "R"
 Warning (10236): Verilog HDL Implicit Net warning at D5M_IP.v(187): created implicit net for "G"
 Warning (10236): Verilog HDL Implicit Net warning at D5M_IP.v(188): created implicit net for "B"
@@ -1881,8 +1883,8 @@ Info (21057): Implemented 3704 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 92 warnings
     Info: Peak virtual memory: 1007 megabytes
-    Info: Processing ended: Thu Jan 10 17:47:30 2019
-    Info: Elapsed time: 00:00:26
+    Info: Processing ended: Tue Jan 15 15:11:52 2019
+    Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:00:18
 
 

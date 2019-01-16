@@ -25,6 +25,8 @@ entity coor_to_trame is
 port(	xtop		:	in	STD_LOGIC_VECTOR(9 downto 0);	--,y
 	htop		:	in	STD_LOGIC;		--,v
 	modetop		:	in	STD_LOGIC;
+	vtop		:	in	STD_LOGIC;
+	switch_id	:	in	STD_LOGIC;
 	clk,rst		:	in	STD_LOGIC;
 
 	new_trame	:	in	STD_LOGIC;	-- signal reçu du decode qui sort de l'état bloquant
@@ -49,12 +51,14 @@ architecture CT of coor_to_trame is
 		port(	x			:	in	STD_LOGIC_VECTOR(9 downto 0);	--,y
 		h				:	in	STD_LOGIC;		--,v
 		mode				:	in	STD_LOGIC;
-		active_rot : out	STD_LOGIC;
+		v				:	in	STD_LOGIC;
+		active_rot			:	out	STD_LOGIC;
 		oh				:	out	STD_LOGIC_VECTOR(15 downto 0));		--,ov
 	end component mode_switch;
 
-	component identifier
+	component identifier		--bouton ID
 		port (oh			:	in	STD_LOGIC_VECTOR(15 downto 0);	--,ov
+		switch_id			:	in	STD_LOGIC;
 		id				:	out	STD_LOGIC_VECTOR(7 downto 0);	--1bit p-ê nécessaire
 		mvt				:	out	STD_LOGIC_VECTOR(15 downto 0));
 	end component identifier;
@@ -90,7 +94,10 @@ architecture CT of coor_to_trame is
 	signal s_x, s_x_reg			:	STD_LOGIC_VECTOR(9 downto 0);	--coordonnée en x input
 	signal s_mode, s_mode_reg		:	STD_LOGIC;	--bouton qui active le mode "manuel"
 	signal s_h, s_h_reg			:	STD_LOGIC;	--bouton pour déplacement horizontal
+	signal s_v, s_v_reg			:	STD_LOGIC;
 	signal s_oh				:	STD_LOGIC_VECTOR(15 downto 0);	--output de MS
+
+	signal s_switch_id, s_switch_id_reg			:	STD_LOGIC;
 
 	signal s_oh_reg				:	STD_LOGIC_VECTOR(15 downto 0);	--input de ID et INS
 
@@ -120,9 +127,10 @@ begin
 ---------------------------------INSTANCIATION-----------------------------------------------
 ---------------------------------------------------------------------------------------------
 
-MS : mode_switch port map (x => s_x, h => s_h, mode => s_mode, active_rot=>active_rot_int ,oh => s_oh);
+--MS : mode_switch port map (x => s_x, h => s_h, mode => s_mode, active_rot=>active_rot_int ,oh => s_oh);
+MS : mode_switch port map (x => s_x, h => s_h, mode => s_mode, v=> s_v, active_rot=>active_rot_int ,oh => s_oh);
 
-ID : identifier port map (oh => s_oh_reg, id => s_id, mvt => s_mvt);
+ID : identifier port map (oh => s_oh_reg, switch_id => s_switch_id_reg, id => s_id, mvt => s_mvt);	--après oh : switch_id => s_switch_id,
 
 INS : instruction port map (trame_wo_instru => s_oh_reg,active_rot=>active_rot_int, trame_w_instru => s_twi, len => s_len, ins => s_ins, adr => s_adr);
 
@@ -145,6 +153,9 @@ begin
 		s_x_reg <= (others => '0');
 		s_mode_reg <= '0';
 		s_h_reg <= '0';
+
+		s_v_reg <= '0';
+
 		s_oh_reg <= (others => '0');
 
 		s_id_reg1 <= (others => '0');
@@ -162,12 +173,17 @@ begin
 		s_adr_reg <= (others => '0');
 
 		s_sum_reg <= (others => '0');
+		
+		s_switch_id_reg <= '0';
 
 	elsif (clk'event and clk = '1') then
 		curr_state <= next_state;
 		s_x_reg <= s_x;
 		s_mode_reg <= s_mode;
 		s_h_reg <= s_h;
+
+		s_v_reg <= s_v;
+
 		s_oh_reg <= s_oh;
 
 		s_id_reg1 <= s_id;
@@ -185,12 +201,14 @@ begin
 		s_adr_reg <= s_adr;
 
 		s_sum_reg <= s_sum;
+		
+		s_switch_id_reg <= s_switch_id;
 
 	end if;			
 end process;
 
 
-fsm : process(curr_state, xtop, modetop, htop, s_out)	--à compléter
+fsm : process(curr_state, xtop, modetop, htop, vtop, s_out)	--à compléter
 begin
 
 	case curr_state is
@@ -199,14 +217,18 @@ begin
 		s_x <= xtop;		--MS lis les entrées du bloc
 		s_mode <= modetop;
 		s_h <= htop;
+		s_v <= vtop;
 		next_state <= S2;
 		str_decode_int <= '0';
+		s_switch_id <= switch_id;
 		trametop <= (others => '0');
 
 	when S2 =>
 		s_x <= s_x_reg;		--sauvegarde des inputs de MS
 		s_mode <= s_mode_reg;
 		s_h <= s_h_reg;
+		s_v <= s_v_reg;
+		s_switch_id <= s_switch_id_reg;
 
 		next_state <= S3;
 		str_decode_int <= '0';
@@ -216,6 +238,8 @@ begin
 		s_x <= s_x_reg;		--sauvegarde des inputs de MS
 		s_mode <= s_mode_reg;
 		s_h <= s_h_reg;
+		s_v <= s_v_reg;
+		s_switch_id <= s_switch_id_reg;
 
 		next_state <= S4;
 		str_decode_int <= '0';
@@ -225,6 +249,8 @@ begin
 		s_x <= s_x_reg;		--sauvegarde des inputs de MS
 		s_mode <= s_mode_reg;
 		s_h <= s_h_reg;
+		s_v <= s_v_reg;
+		s_switch_id <= s_switch_id_reg;
 
 		next_state <= S5;
 
@@ -237,8 +263,9 @@ begin
 		s_x <= s_x_reg;		--sauvegarde des inputs de MS
 		s_mode <= s_mode_reg;
 		s_h <= s_h_reg;
+		s_v <= s_v_reg;
+		s_switch_id <= s_switch_id_reg;
 
-		
 		if(new_trame = '0')
 		then
 			str_decode_int <= '0';
@@ -257,6 +284,8 @@ begin
 		s_x <= (others => '0');
 		s_mode <= '0';
 		s_h <= '0';
+		s_v <= s_v_reg;
+		s_switch_id <= s_switch_id_reg;
 
 		next_state <= S1;
 		str_decode_int <= '0';

@@ -22,6 +22,8 @@ entity mode_switch is
 port(	x	:	in	STD_LOGIC_VECTOR(9 downto 0);	--,y
 	h	:	in	STD_LOGIC;		--,v
 	mode	:	in	STD_LOGIC;
+	v	:	in	STD_LOGIC;
+	active_rot : out	STD_LOGIC;
 	oh	:	out	STD_LOGIC_VECTOR(15 downto 0));		--,ov
 end mode_switch;
 
@@ -30,7 +32,7 @@ architecture MS of mode_switch is
 	--signal nxt_oh	: STD_LOGIC_VECTOR(15 downto 0)) := "0000100000000000";
 
 begin
-process(mode, h, x)
+process(mode, h, v, x)
 begin
 
 	if (mode = '0') then		--mode de fonctionnement qui prend les entrées du cpu
@@ -39,11 +41,31 @@ begin
 			--ov <= "000000" & y;
 
 	elsif (mode = '1') then		--mode de fct pour validation (usage manuel -> a relier aux boutons du fpga)
+	
+		if (h = '0') then --faire un bouton torque + un bouton avec 2 positions
+			--comme ça on pourra : avec torque (bool) autoriser ou non le déplacement (hors de mode = 1)
+			--eventuellement écrire dans le torque dans le reset
+			--avec h on met 2 valeurs qui permettent de bouger de gauche à droite
+			
+			
+			active_rot<='1';
+			if (v = '0') then
 
-		if (h = '0') then
-			oh <= "0000010101010011"; --bras horizontal à 120°
+			--oh <= "0000000100000001";--test ex16
+				oh <= "0000000000001000";--180° 0x00 0x08
+
+			else
+				--oh <= "0101001100000101"; --120°
+				oh <= "0000000000000100";
+			end if;
+			--active_rot<='1';
+			--oh <= "0000010101010011"; --bras horizontal à 120°
+			
 		else 
-			oh <= "0000101010100111"; --bras horizontal à 240°
+			--oh <= "0000101010100111"; --bras horizontal à 240°
+			active_rot<='0';
+			oh <= "0000000000000000";--test ex16
+			
 		end if;
 
 --		if (v = 0) then

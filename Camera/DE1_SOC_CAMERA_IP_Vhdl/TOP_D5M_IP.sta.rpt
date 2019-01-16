@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for TOP_D5M_IP
-Wed Dec 19 11:32:34 2018
+Tue Jan 15 15:04:07 2019
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Full Version
 
 
@@ -117,12 +117,12 @@ agreement for further details.
 ; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.45        ;
+; Average used               ; 1.48        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  44.6%      ;
+;     Processor 2            ;  47.8%      ;
 +----------------------------+-------------+
 
 
@@ -131,7 +131,7 @@ agreement for further details.
 +--------------------+--------+--------------------------+
 ; SDC File Path      ; Status ; Read at                  ;
 +--------------------+--------+--------------------------+
-; TOP_D5M_IP.out.sdc ; OK     ; Wed Dec 19 11:31:32 2018 ;
+; TOP_D5M_IP.out.sdc ; OK     ; Tue Jan 15 15:03:04 2019 ;
 +--------------------+--------+--------------------------+
 
 
@@ -2456,7 +2456,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Full Version
-    Info: Processing started: Wed Dec 19 11:31:25 2018
+    Info: Processing started: Tue Jan 15 15:02:57 2019
 Info: Command: quartus_sta TOP_D5M_IP -c TOP_D5M_IP
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -2673,9 +2673,9 @@ Info (332146): Worst-case minimum pulse width slack is 8.756
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 1227 megabytes
-    Info: Processing ended: Wed Dec 19 11:32:34 2018
-    Info: Elapsed time: 00:01:09
+    Info: Peak virtual memory: 1219 megabytes
+    Info: Processing ended: Tue Jan 15 15:04:07 2019
+    Info: Elapsed time: 00:01:10
     Info: Total CPU time (on all processors): 00:01:35
 
 

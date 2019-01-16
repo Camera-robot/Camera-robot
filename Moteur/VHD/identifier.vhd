@@ -20,18 +20,31 @@ library IEEE;	--à nettoyer en test unitaire à la fin
 
 entity identifier is
 	port (oh	:	in	STD_LOGIC_VECTOR(15 downto 0);	--,ov
+	switch_id	:	in	STD_LOGIC;--servo 1 ou 2
 	id		:	out	STD_LOGIC_VECTOR(7 downto 0);	--1bit p-ê nécessaire
 	mvt		:	out	STD_LOGIC_VECTOR(15 downto 0));
 end identifier;
 
 architecture id of identifier is
+	signal s_id : STD_LOGIC_VECTOR(7 downto 0);
 
 begin			-- pour l'instant sort OxFE + la trame à compléter
 
 -- plus tard nécessitera un test pour donner le bon id
 
-	--id <= "11111110";
-	  id <= "00000010";
+	--id <= "11111110"; 0xFE BroadCast
+
+	process(switch_id)
+	begin
+		if(switch_id = '0')
+		then
+			s_id <= "00000001";
+		else
+			s_id <= "00000010";
+		end if;
+	end process;
+	
+	id <= s_id;
 	mvt <= oh;
 
 

@@ -1,13 +1,13 @@
-Fitter Status : Successful - Mon Jan 14 12:26:31 2019
+Fitter Status : Successful - Tue Jan 15 16:39:44 2019
 Quartus II 64-Bit Version : 14.0.0 Build 200 06/17/2014 SJ Full Version
 Revision Name : Moteur
 Top-level Entity Name : top_72_to_serial
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 72 / 32,070 ( < 1 % )
-Total registers : 112
-Total pins : 16 / 457 ( 4 % )
+Logic utilization (in ALMs) : 85 / 32,070 ( < 1 % )
+Total registers : 119
+Total pins : 18 / 457 ( 4 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
 Total DSP Blocks : 0 / 87 ( 0 % )
